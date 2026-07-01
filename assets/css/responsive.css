@@ -1,0 +1,20 @@
+@media (max-width: 991.98px) {
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+
+    .navbar-inner {
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile-sidebar {
+        width: 85%;
+    }
+}
