@@ -100,4 +100,49 @@ $(function () {
         });
     }
 
+
+      /* ============ PROCESS SECTION — SYNCED STAT COUNTERS ============ */
+    const statsCard = document.getElementById('processStatsCard');
+ 
+    function runStatsCounters() {
+        const counters = statsCard.querySelectorAll('[data-count-to]');
+        const duration = 1800; // all counters start + finish together
+        const startTime = performance.now();
+ 
+        function tick(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
+ 
+            counters.forEach(function (counter) {
+                const target = parseInt(counter.dataset.countTo, 10);
+                counter.textContent = Math.floor(eased * target);
+            });
+ 
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            } else {
+                counters.forEach(function (counter) {
+                    counter.textContent = counter.dataset.countTo;
+                });
+            }
+        }
+ 
+        requestAnimationFrame(tick);
+    }
+ 
+    if (statsCard && 'IntersectionObserver' in window) {
+        const statsObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    runStatsCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+ 
+        statsObserver.observe(statsCard);
+    } else if (statsCard) {
+        runStatsCounters();
+    }
+ 
 });
