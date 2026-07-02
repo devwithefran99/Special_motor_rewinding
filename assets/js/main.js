@@ -1,121 +1,103 @@
-document.addEventListener('DOMContentLoaded', function () {
+/* =========================================================
+   MOTOR SERVICE — MAIN JAVASCRIPT
+   ========================================================= */
 
-    /* ============================================================
-       MOBILE SIDEBAR TOGGLE
-       ============================================================ */
-    var menuBtn = document.getElementById('mobile-menu-btn');
-    var closeBtn = document.getElementById('sidebar-close-btn');
-    var sidebar = document.getElementById('mobile-sidebar');
-    var overlay = document.getElementById('sidebar-overlay');
-    var body = document.body;
+$(function () {
+
+    /* ============ AOS INIT ============ */
+    AOS.init({
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true
+    });
+
+
+    /* ============ DESKTOP NAV — SLIDING PILL INDICATOR ============ */
+    const $navList = $('#mainNavList');
+    const $navLinks = $navList.find('[data-nav-link]');
+    const $navPill = $navList.find('.main-nav-list__pill');
+
+    function movePillTo($link) {
+        if (!$link.length) return;
+        const linkEl = $link[0];
+        $navPill.css({
+            left: linkEl.offsetLeft + 'px',
+            width: linkEl.offsetWidth + 'px'
+        }).addClass('is-visible');
+    }
+
+    function resetPillToActive() {
+        const $active = $navLinks.filter('.is-active');
+        if ($active.length) {
+            movePillTo($active);
+        } else {
+            $navPill.removeClass('is-visible');
+        }
+    }
+
+    // Position pill on initial load (after fonts/layout settle)
+    setTimeout(resetPillToActive, 100);
+
+    $navLinks.on('mouseenter', function () {
+        movePillTo($(this));
+    });
+
+    $navList.on('mouseleave', function () {
+        resetPillToActive();
+    });
+
+    // Re-calculate pill position on resize (desktop only)
+    let resizeTimer;
+    $(window).on('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(resetPillToActive, 150);
+    });
+
+
+    /* ============ MOBILE SIDEBAR TOGGLE ============ */
+    const $body = $('body');
+    const $sidebar = $('#mobileSidebar');
+    const $overlay = $('#sidebarOverlay');
+    const $toggleBtn = $('#navbarToggleBtn');
+    const $closeBtn = $('#sidebarCloseBtn');
 
     function openSidebar() {
-        sidebar.classList.add('active');
-        overlay.classList.add('active');
-        body.classList.add('sidebar-open');
-        menuBtn.setAttribute('aria-expanded', 'true');
+        $sidebar.addClass('is-open').attr('aria-hidden', 'false');
+        $overlay.addClass('is-active');
+        $toggleBtn.attr('aria-expanded', 'true');
+        $body.css('overflow', 'hidden');
     }
 
     function closeSidebar() {
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-        body.classList.remove('sidebar-open');
-        menuBtn.setAttribute('aria-expanded', 'false');
+        $sidebar.removeClass('is-open').attr('aria-hidden', 'true');
+        $overlay.removeClass('is-active');
+        $toggleBtn.attr('aria-expanded', 'false');
+        $body.css('overflow', '');
     }
 
-    if (menuBtn) {
-        menuBtn.addEventListener('click', openSidebar);
-    }
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeSidebar);
-    }
-    if (overlay) {
-        overlay.addEventListener('click', closeSidebar);
-    }
+    $toggleBtn.on('click', openSidebar);
+    $closeBtn.on('click', closeSidebar);
+    $overlay.on('click', closeSidebar);
+    $sidebar.find('[data-nav-link]').on('click', closeSidebar);
 
-    // Close sidebar with ESC key
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
+    // Close sidebar on ESC key
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape' && $sidebar.hasClass('is-open')) {
             closeSidebar();
         }
     });
 
-    /* ============================================================
-       SLIDING NAV PILL INDICATOR
-       ============================================================ */
-    var navLinksList = document.getElementById('nav-links');
-    var pillIndicator = document.getElementById('nav-pill-indicator');
 
-    if (navLinksList && pillIndicator) {
-        var navLinkEls = navLinksList.querySelectorAll('.nav-link');
-        var activeLinkEl = navLinksList.querySelector('.nav-link.active') || navLinkEls[0];
-
-        function movePillTo(linkEl, scaled) {
-            if (!linkEl) return;
-            var scaleValue = scaled ? 1.1 : 1;
-            pillIndicator.style.width = linkEl.offsetWidth + 'px';
-            pillIndicator.style.transform =
-                'translateX(' + linkEl.offsetLeft + 'px) scale(' + scaleValue + ')';
-        }
-
-        // Position the pill under the active link on load (no animation on first paint)
-        pillIndicator.style.transition = 'none';
-        movePillTo(activeLinkEl, true);
-        // Re-enable smooth transition for subsequent hovers
-        requestAnimationFrame(function () {
-            pillIndicator.style.transition = '';
+    /* ============ HERO CAROUSEL — FADE + SWIPE CONFIG ============ */
+    const heroCarouselEl = document.getElementById('heroCarousel');
+    if (heroCarouselEl) {
+        heroCarouselEl.classList.add('carousel-fade');
+        new bootstrap.Carousel(heroCarouselEl, {
+            interval: 5000,
+            pause: 'hover',
+            touch: true,
+            ride: 'carousel'
         });
-
-        navLinkEls.forEach(function (link) {
-            link.addEventListener('mouseenter', function () {
-                movePillTo(link, true);
-            });
-        });
-
-        navLinksList.addEventListener('mouseleave', function () {
-            movePillTo(activeLinkEl, true);
-        });
-
-        // Keep the pill aligned correctly if the window is resized
-        window.addEventListener('resize', function () {
-            pillIndicator.style.transition = 'none';
-            movePillTo(navLinksList.querySelector('.nav-link:hover') || activeLinkEl, true);
-            requestAnimationFrame(function () {
-                pillIndicator.style.transition = '';
-            });
-        });
-    }
-
-    /* ============================================================
-       DAY / NIGHT MODE TOGGLE
-       ============================================================ */
-    var htmlEl = document.documentElement;
-    var themeBtnDesktop = document.getElementById('theme-toggle-btn');
-    var themeBtnMobile = document.getElementById('theme-toggle-btn-mobile');
-
-    function applyTheme(theme) {
-        htmlEl.setAttribute('data-theme', theme);
-        localStorage.setItem('motorservice-theme', theme);
-    }
-
-    function toggleTheme() {
-        var current = htmlEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        applyTheme(current === 'dark' ? 'light' : 'dark');
-    }
-
-    // Load saved theme, or fall back to system preference
-    var savedTheme = localStorage.getItem('motorservice-theme');
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        applyTheme('dark');
-    }
-
-    if (themeBtnDesktop) {
-        themeBtnDesktop.addEventListener('click', toggleTheme);
-    }
-    if (themeBtnMobile) {
-        themeBtnMobile.addEventListener('click', toggleTheme);
     }
 
 });

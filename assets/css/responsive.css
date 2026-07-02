@@ -1,20 +1,179 @@
-@media (max-width: 991.98px) {
-    .nav-links,
-    .nav-actions {
-        display: none;
+/* =========================================================
+   MOTOR SERVICE — RESPONSIVE STYLESHEET
+   Desktop-first: base styles in style.css target desktop.
+   Every override below narrows the viewport downward.
+   ========================================================= */
+
+/* ============ LAPTOP (<= 1199px) ============ */
+@media (max-width: 1199px) {
+    .main-navbar__container {
+        padding: 0 20px;
     }
 
-    .mobile-menu-btn {
-        display: inline-flex;
+    .main-nav-list {
+        gap: 4px;
     }
 
-    .navbar-inner {
-        padding: 14px 20px;
+    .main-nav-list__link {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .hero-content__heading {
+        font-size: 38px;
+    }
+
+    .hero-slide,
+    .hero-slide__overlay {
+        min-height: 500px;
     }
 }
 
-@media (max-width: 400px) {
+
+/* ============ TABLET (<= 991px) ============ */
+@media (max-width: 991px) {
+    :root {
+        --navbar-height: 76px;
+    }
+
+    /* Hide desktop nav + actions, show hamburger */
+    .main-nav-list,
+    .navbar-actions {
+        display: none;
+    }
+
+    .navbar-toggle-btn {
+        display: flex;
+    }
+
+    .main-navbar__container {
+        justify-content: space-between;
+    }
+
+    /* Banner keeps filling the full slide; content stays overlaid top-left, just scaled down */
+    .hero-slide,
+    .hero-slide__overlay {
+        min-height: 440px;
+    }
+
+    .hero-content {
+        max-width: 360px;
+    }
+
+    .hero-content__heading {
+        font-size: 30px;
+    }
+
+    .hero-content__description {
+        font-size: 14px;
+    }
+
+    .follow-us-badge {
+        width: 420px;
+    }
+}
+
+
+/* ============ MOBILE (<= 767px) ============ */
+@media (max-width: 767px) {
+    .hero-slide,
+    .hero-slide__overlay {
+        min-height: 380px;
+    }
+
+    .hero-slide__bg {
+        object-position: center right -20px;
+    }
+
+    .hero-content {
+        max-width: 260px;
+    }
+
+    .hero-content__eyebrow {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .hero-content__eyebrow-line {
+        width: 32px;
+    }
+
+    .hero-content__heading {
+        font-size: 21px;
+        margin-bottom: 14px;
+    }
+
+    .hero-content__description {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .follow-us-badge {
+        width: 340px;
+    }
+
+    .follow-us-badge__label {
+        font-size: 12px;
+    }
+
+    .follow-us-badge__link {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+}
+
+
+/* ============ SMALL MOBILE (<= 575px) ============ */
+@media (max-width: 575px) {
+    .main-navbar__container {
+        padding: 0 16px;
+    }
+
+    .site-logo__text {
+        font-size: 17px;
+    }
+
+    .hero-slide,
+    .hero-slide__overlay {
+        min-height: 320px;
+    }
+
+    .hero-content {
+        max-width: 210px;
+    }
+
+    .hero-content__heading {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content__eyebrow {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content__eyebrow-line {
+        width: 24px;
+    }
+
+    .hero-content__description {
+        font-size: 11px;
+    }
+
+    .follow-us-badge {
+        width: 280px;
+    }
+
+    .follow-us-badge__content {
+        gap: 8px;
+    }
+
+    .follow-us-badge__label {
+        display: none;
+    }
+
     .mobile-sidebar {
-        width: 85%;
+        max-width: 300px;
     }
 }

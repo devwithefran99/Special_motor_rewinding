@@ -3,105 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor Service | Repair &amp; Rewinding in Abu Dhabi</title>
+    <title>Motor Repair &amp; Rewinding Workshop in Abu Dhabi | Motor Service</title>
+    <meta name="description" content="Professional AC/DC motor winding, repair, and maintenance solutions for pumps, compressors, and industrial equipment in Abu Dhabi and Mussafah.">
 
-    <!-- Bootstrap 5 CSS -->
+    <!-- ============ FAVICON ============ -->
+    <link rel="icon" type="image/png" href="assets/image/favicon.png">
+
+    <!-- ============ GOOGLE FONTS ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ============ BOOTSTRAP 5 CDN ============ -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
+
+    <!-- ============ FONT AWESOME CDN ============ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ============ AOS ANIMATION CDN ============ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ============ CUSTOM STYLESHEETS ============ -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <!-- ============ NAVBAR SECTION START ============ -->
-    <nav id="navbar" class="main-navbar">
-        <div class="navbar-inner">
+    <!-- ============ HEADER / NAVBAR START ============ -->
+    <!-- COMPONENT: header-navbar -->
+    <header id="site-header" class="site-header">
+        <nav id="main-navbar" class="main-navbar navbar navbar-expand-lg">
+            <div class="container-fluid main-navbar__container">
 
-            <!-- Logo -->
-            <div id="nav-logo" class="nav-logo">
-                <a href="index.html" class="logo-link">
-                    <!-- LOGO PLACEHOLDER: replace span with <img src="assets/image/logo.png" alt="Motor Service Logo"> -->
-                    <span class="logo-placeholder">LOGO</span>
-                </a>
-            </div>
-
-            <!-- Desktop Nav Links -->
-            <ul id="nav-links" class="nav-links">
-                <li class="nav-pill-indicator" id="nav-pill-indicator" aria-hidden="true"></li>
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-
-            <!-- Right Side: Phone, Theme Toggle, CTA -->
-            <div id="nav-actions" class="nav-actions">
-                <a href="tel:+8001234567" class="nav-phone">
-                    <i class="bi bi-telephone-fill"></i>
-                    <span>(800) 123-4567</span>
+                <!-- Logo (placeholder slot - client logo to be added) -->
+                <a id="site-logo" class="site-logo" href="index.html" aria-label="Motor Service - Home">
+                    <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
                 </a>
 
-                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle day and night mode" type="button">
-                    <i class="bi bi-moon-fill theme-icon-dark"></i>
-                    <i class="bi bi-sun-fill theme-icon-light"></i>
+                <!-- Mobile Hamburger Toggle -->
+                <button id="navbarToggleBtn" class="navbar-toggle-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileSidebar">
+                    <span class="navbar-toggle-btn__bar"></span>
+                    <span class="navbar-toggle-btn__bar"></span>
+                    <span class="navbar-toggle-btn__bar"></span>
                 </button>
 
-                <a href="contact.html" class="btn-book-service">Book A Service</a>
+                <!-- Desktop Center Navigation -->
+                <ul id="mainNavList" class="main-nav-list">
+                    <li class="main-nav-list__item">
+                        <a href="index.html" class="main-nav-list__link is-active" data-nav-link>Home</a>
+                    </li>
+                    <li class="main-nav-list__item">
+                        <a href="services.html" class="main-nav-list__link" data-nav-link>Services</a>
+                    </li>
+                    <li class="main-nav-list__item">
+                        <a href="about.html" class="main-nav-list__link" data-nav-link>About Us</a>
+                    </li>
+                    <li class="main-nav-list__item">
+                        <a href="contact.html" class="main-nav-list__link" data-nav-link>Contact Us</a>
+                    </li>
+                    <!-- Sliding pill indicator (position set via JS) -->
+                    <li class="main-nav-list__pill" aria-hidden="true"></li>
+                </ul>
+
+                <!-- Desktop Right Actions -->
+                <div class="navbar-actions">
+                    <a href="tel:+8001234567" class="navbar-actions__phone" aria-label="Call us at (800) 123-4567">
+                        <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
+                        <span class="navbar-actions__phone-number">(800) 123-4567</span>
+                    </a>
+                    <a href="quote.html" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
+                </div>
             </div>
-
-            <!-- Mobile Only: Hamburger -->
-            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" type="button">
-                <i class="bi bi-list"></i>
-            </button>
-
-        </div>
-    </nav>
-    <!-- ============ NAVBAR SECTION END ============ -->
-
-
-    <!-- ============ MOBILE SIDEBAR START ============ -->
-    <div id="mobile-sidebar" class="mobile-sidebar">
-        <div class="mobile-sidebar-header">
-            <div class="nav-logo">
-                <span class="logo-placeholder">LOGO</span>
-            </div>
-            <button id="sidebar-close-btn" class="sidebar-close-btn" aria-label="Close menu" type="button">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-            <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
-        </ul>
-
-        <div class="mobile-sidebar-footer">
-            <a href="tel:+8001234567" class="nav-phone">
-                <i class="bi bi-telephone-fill"></i>
-                <span>(800) 123-4567</span>
-            </a>
-
-            <button id="theme-toggle-btn-mobile" class="theme-toggle-btn" aria-label="Toggle day and night mode" type="button">
-                <i class="bi bi-moon-fill theme-icon-dark"></i>
-                <i class="bi bi-sun-fill theme-icon-light"></i>
-            </button>
-
-            <a href="contact.html" class="btn-book-service w-100 text-center">Book A Service</a>
-        </div>
-    </div>
-    <!-- ============ MOBILE SIDEBAR END ============ -->
+        </nav>
+    </header>
 
     <!-- Mobile Sidebar Overlay -->
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <!-- Mobile Sidebar Navigation -->
+    <!-- COMPONENT: mobile-sidebar -->
+    <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+        <div class="mobile-sidebar__top">
+            <a href="index.html" class="site-logo site-logo--sidebar" aria-label="Motor Service - Home">
+                <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
+            </a>
+            <button id="sidebarCloseBtn" class="mobile-sidebar__close" type="button" aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul id="mobileNavList" class="mobile-nav-list">
+            <li class="mobile-nav-list__item">
+                <a href="index.html" class="mobile-nav-list__link is-active" data-nav-link>Home</a>
+            </li>
+            <li class="mobile-nav-list__item">
+                <a href="services.html" class="mobile-nav-list__link" data-nav-link>Services</a>
+            </li>
+            <li class="mobile-nav-list__item">
+                <a href="about.html" class="mobile-nav-list__link" data-nav-link>About Us</a>
+            </li>
+            <li class="mobile-nav-list__item">
+                <a href="contact.html" class="mobile-nav-list__link" data-nav-link>Contact Us</a>
+            </li>
+        </ul>
+
+        <div class="mobile-sidebar__bottom">
+            <a href="tel:+8001234567" class="navbar-actions__phone navbar-actions__phone--sidebar">
+                <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
+                <span class="navbar-actions__phone-number">(800) 123-4567</span>
+            </a>
+            <a href="quote.html" class="navbar-actions__cta navbar-actions__cta--sidebar">Book A Service</a>
+        </div>
+    </aside>
+    <!-- ============ HEADER / NAVBAR END ============ -->
 
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- ============ HERO SECTION START ============ -->
+    <!-- COMPONENT: hero-section -->
+    <section id="hero-section" class="hero-section">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-pause="hover">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="hero-slide">
+                        <img src="assets/image/hero-banner-motor-repair.png" class="hero-slide__bg" alt="Motor repair technician servicing an industrial electric motor in Abu Dhabi workshop" width="1020" height="564" fetchpriority="high">
+                        <div class="hero-slide__overlay">
+                            <div class="container">
+                                <div class="hero-content">
+                                    <p class="hero-content__eyebrow" data-aos="fade-up" data-aos-delay="0">
+                                        <span class="hero-content__eyebrow-line"></span>
+                                        From Repair to Rewinding
+                                    </p>
+                                    <h1 class="hero-content__heading" data-aos="fade-up" data-aos-delay="200">
+                                        We Service <span class="hero-content__heading-accent">Every&nbsp;Motor</span> Type in Abu Dhabi
+                                    </h1>
+                                    <p class="hero-content__description" data-aos="fade-up" data-aos-delay="400">
+                                        Professional motor winding, repair, and maintenance solutions for AC, DC motors, pumps, compressors, and industrial equipment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="hero-slide">
+                        <img src="assets/image/hero-banner-motor-repair.png" class="hero-slide__bg" alt="Motor repair technician servicing an industrial electric motor in Abu Dhabi workshop" width="1020" height="564" loading="lazy">
+                        <div class="hero-slide__overlay">
+                            <div class="container">
+                                <div class="hero-content">
+                                    <p class="hero-content__eyebrow">
+                                        <span class="hero-content__eyebrow-line"></span>
+                                        From Repair to Rewinding
+                                    </p>
+                                    <h1 class="hero-content__heading">
+                                        We Service <span class="hero-content__heading-accent">Every&nbsp;Motor</span> Type in Abu Dhabi
+                                    </h1>
+                                    <p class="hero-content__description">
+                                        Professional motor winding, repair, and maintenance solutions for AC, DC motors, pumps, compressors, and industrial equipment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="hero-slide">
+                        <img src="assets/image/hero-banner-motor-repair.png" class="hero-slide__bg" alt="Motor repair technician servicing an industrial electric motor in Abu Dhabi workshop" width="1020" height="564" loading="lazy">
+                        <div class="hero-slide__overlay">
+                            <div class="container">
+                                <div class="hero-content">
+                                    <p class="hero-content__eyebrow">
+                                        <span class="hero-content__eyebrow-line"></span>
+                                        From Repair to Rewinding
+                                    </p>
+                                    <h1 class="hero-content__heading">
+                                        We Service <span class="hero-content__heading-accent">Every&nbsp;Motor</span> Type in Abu Dhabi
+                                    </h1>
+                                    <p class="hero-content__description">
+                                        Professional motor winding, repair, and maintenance solutions for AC, DC motors, pumps, compressors, and industrial equipment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ============ FOLLOW US SECTION START ============ -->
+        <!-- COMPONENT: follow-us-badge -->
+        <div class="follow-us-badge">
+            <svg class="follow-us-badge__shape" width="480" height="82" viewBox="0 0 480 82" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M68.0687 82C48.0542 82 29.9681 70.0648 22.0973 51.6629L0 0L480 0L457.903 51.6629C450.032 70.0647 431.946 82 411.931 82L240 82L68.0687 82Z" fill="#000"/>
+            </svg>
+            <div class="follow-us-badge__content">
+                <span class="follow-us-badge__label">Follow us:</span>
+                <ul class="follow-us-badge__list">
+                    <li><a href="#" class="follow-us-badge__link" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="follow-us-badge__link" aria-label="Follow us on Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" class="follow-us-badge__link" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="follow-us-badge__link" aria-label="Chat with us on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============ FOLLOW US SECTION END ============ -->
+
+    </section>
+    <!-- ============ HERO SECTION END ============ -->
+
+
+    <!-- ============ BOOTSTRAP + JQUERY + AOS CDN ============ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ============ CUSTOM JS ============ -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
