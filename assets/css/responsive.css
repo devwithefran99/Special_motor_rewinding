@@ -295,4 +295,19 @@
         align-items: flex-start;
         gap: 16px;
     }
+    @media (max-width: 991.98px) {
+    #services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    #services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #services-section .services-title {
+        font-size: 1.8rem;
+    }
+}
 }

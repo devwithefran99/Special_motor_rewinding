@@ -866,5 +866,173 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
+
+/* ============================================================
+   SERVICES SECTION — new variables
+   ============================================================ */
+:root {
+    --service-card-bg: #f6f7f9;
+    --service-card-bg-hover: #ffffff;
+    --service-card-shadow-hover: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] {
+    --service-card-bg: #171b22;
+    --service-card-bg-hover: #1f242c;
+    --service-card-shadow-hover: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   SERVICES SECTION
+   ============================================================ */
+#services-section {
+    padding: 100px 0;
+    background-color: var(--nav-bg);
+}
+
+#services-section .services-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#services-section .services-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+}
+
+#services-section .services-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: var(--nav-accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+}
+
+#services-section .eyebrow-line {
+    width: 55px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--nav-accent));
+}
+
+#services-section .eyebrow-line.right {
+    background: linear-gradient(90deg, var(--nav-accent), transparent);
+}
+
+#services-section .services-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--nav-text);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+#services-section .services-title .text-accent {
+    color: var(--nav-accent);
+}
+
+#services-section .services-subtitle {
+    color: var(--nav-text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+#services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+#services-grid .service-card {
+    position: relative;
+    display: block;
+    background-color: var(--service-card-bg);
+    border-radius: 16px;
+    padding: 26px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services-grid .service-card:hover {
+    background-color: var(--service-card-bg-hover);
+    transform: translateY(-6px);
+    box-shadow: var(--service-card-shadow-hover);
+}
+
+#services-grid .service-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--nav-text);
+    margin-bottom: 10px;
+}
+
+#services-grid .service-card-desc {
+    font-size: 0.92rem;
+    color: var(--nav-text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#services-grid .service-card-media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+#services-grid .service-card-media img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Underline bar — visible by default, hides on hover */
+#services-grid .service-card-line {
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--nav-accent);
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+#services-grid .service-card:hover .service-card-line {
+    opacity: 0;
+}
+
+/* Click icon — hidden by default, appears on hover */
+#services-grid .service-card-icon {
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    transform: translateX(-50%) scale(0.5);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--nav-active-bg);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    opacity: 0;
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.4);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+#services-grid .service-card:hover .service-card-icon {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
  
  
