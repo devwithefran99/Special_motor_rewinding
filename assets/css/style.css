@@ -537,7 +537,7 @@ img {
     padding: 110px 0;
     background-color: var(--color-white);
     overflow: hidden;
-}
+}     
  
 #processGrid {
     row-gap: 60px;

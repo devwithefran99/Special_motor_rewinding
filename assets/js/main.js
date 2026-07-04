@@ -1,10 +1,10 @@
-/* =========================================================
+/* =========
    MOTOR SERVICE — MAIN JAVASCRIPT
-   ========================================================= */
+   ========= */
 
 $(function () {
 
-    /* ============ AOS INIT ============ */
+    /*  AOS INIT  */
     AOS.init({
         duration: 700,
         easing: 'ease-out-cubic',
@@ -12,7 +12,7 @@ $(function () {
     });
 
 
-    /* ============ DESKTOP NAV — SLIDING PILL INDICATOR ============ */
+    /*  DESKTOP NAV — SLIDING PILL INDICATOR  */
     const $navList = $('#mainNavList');
     const $navLinks = $navList.find('[data-nav-link]');
     const $navPill = $navList.find('.main-nav-list__pill');
@@ -54,7 +54,7 @@ $(function () {
     });
 
 
-    /* ============ MOBILE SIDEBAR TOGGLE ============ */
+    /*  MOBILE SIDEBAR TOGGLE  */
     const $body = $('body');
     const $sidebar = $('#mobileSidebar');
     const $overlay = $('#sidebarOverlay');
@@ -88,12 +88,12 @@ $(function () {
     });
 
 
-    /* ============ HERO CAROUSEL — FADE + SWIPE CONFIG ============ */
+    /*  HERO CAROUSEL — FADE + SWIPE CONFIG  */
     const heroCarouselEl = document.getElementById('heroCarousel');
     if (heroCarouselEl) {
         heroCarouselEl.classList.add('carousel-fade');
         new bootstrap.Carousel(heroCarouselEl, {
-            interval: 5000,
+            interval: 4000,
             pause: 'hover',
             touch: true,
             ride: 'carousel'
@@ -101,7 +101,7 @@ $(function () {
     }
 
 
-      /* ============ PROCESS SECTION — SYNCED STAT COUNTERS ============ */
+      /*  PROCESS SECTION — SYNCED STAT COUNTERS  */
     const statsCard = document.getElementById('processStatsCard');
  
     function runStatsCounters() {

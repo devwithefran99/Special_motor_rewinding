@@ -1,10 +1,10 @@
-/* =========================================================
+/* =========
    MOTOR SERVICE — RESPONSIVE STYLESHEET
    Desktop-first: base styles in style.css target desktop.
    Every override below narrows the viewport downward.
-   ========================================================= */
+   ========= */
 
-/* ============ LAPTOP (<= 1199px) ============ */
+/*  LAPTOP (<= 1199px)  */
 @media (max-width: 1199px) {
     .main-navbar__container {
         padding: 0 20px;
@@ -47,7 +47,7 @@
 }
 
 
-/* ============ TABLET (<= 991px) ============ */
+/*  TABLET (<= 991px)  */
 @media (max-width: 991px) {
     :root {
         --navbar-height: 76px;
@@ -115,7 +115,7 @@
 }
 
 
-/* ============ MOBILE (<= 767px) ============ */
+/*  MOBILE (<= 767px)  */
 @media (max-width: 767px) {
     .hero-slide,
     .hero-slide__overlay {
@@ -211,7 +211,7 @@
 }
 
 
-/* ============ SMALL MOBILE (<= 575px) ============ */
+/*  SMALL MOBILE (<= 575px)  */
 @media (max-width: 575px) {
     .main-navbar__container {
         padding: 0 16px;
