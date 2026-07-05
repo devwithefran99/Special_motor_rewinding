@@ -4,17 +4,18 @@
    Every override below narrows the viewport downward.
    ========= */
 
-/*  LAPTOP (<= 1199px)  */
+
 @media (max-width: 1199px) {
-    .main-navbar__container {
+
+   .main-navbar__container {
         padding: 0 20px;
     }
-
+ 
     .main-nav-list {
         gap: 4px;
     }
-
-    .main-nav-list__link {
+ 
+    .main-nav-list__link.nav-link {
         padding: 10px 16px;
         font-size: 14px;
     }
@@ -27,23 +28,23 @@
     .hero-slide__overlay {
         min-height: 500px;
     }
-       .process-section {
+
+    .process-section {
         padding: 90px 0;
     }
- 
+
     #processGallery {
         height: 420px;
         max-width: 100%;
     }
- 
+
     #processContent {
         padding-left: 0;
     }
- 
+
     #processHeading {
         font-size: 30px;
     }
-
 }
 
 
@@ -88,29 +89,125 @@
     .follow-us-badge {
         width: 420px;
     }
-     .process-section {
+
+    .process-section {
         padding: 70px 0;
     }
- 
+
     #processGrid {
         row-gap: 70px;
     }
- 
+
     #processGallery {
         height: 440px;
         max-width: 480px;
         margin: 0 auto;
     }
- 
+
     #processStatsCard {
         left: 6%;
         bottom: -28px;
         width: 200px;
         padding: 18px 16px;
     }
- 
+
     .process-stats-card__number {
         font-size: 22px;
+    }
+
+    /* Services grid → 2 columns on tablet */
+    #services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA banner */
+    #ctaBannerInner {
+        padding: 46px 20px;
+    }
+
+    #ctaBannerHeading {
+        font-size: 28px;
+    }
+
+    #ctaBtnBook,
+    #ctaBtnCall,
+    #ctaBtnWhatsapp {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    /* FAQ */
+    #faq-section {
+        padding: 70px 0;
+    }
+
+    #faqImageCol {
+        display: none;
+    }
+
+    #faqHeading {
+        font-size: 28px;
+    }
+
+    /* Service area */
+    #area-section {
+        padding: 70px 0;
+    }
+
+    #areaContentCol {
+        order: 1;
+        margin-bottom: 28px;
+    }
+
+    #areaMapCol {
+        order: 2;
+    }
+
+    #areaHeading {
+        font-size: 30px;
+    }
+
+    #areaSubtitle {
+        margin-top: 14px;
+    }
+
+    #areaMapBox {
+        min-height: 360px;
+    }
+
+    /* Book service */
+    #book-section {
+        padding: 70px 0;
+    }
+
+    #bookInfoCol {
+        order: 1;
+        margin-bottom: 24px;
+    }
+
+    #bookFormCol {
+        order: 2;
+    }
+
+    #bookHeading {
+        font-size: 30px;
+    }
+
+    #bookFormCard {
+        padding: 32px;
+    }
+
+    #bookFormTitle {
+        font-size: 26px;
+    }
+
+    /* Footer */
+    .footer-row {
+        padding: 56px 0 36px;
+    }
+
+    .footer-col {
+        margin-bottom: 32px;
     }
 }
 
@@ -155,7 +252,7 @@
 
     .follow-us-badge__label {
         font-size: 12px;
-       color: #1d1c1c;
+        color: #1d1c1c;
     }
 
     .follow-us-badge__link {
@@ -163,62 +260,241 @@
         height: 28px;
         font-size: 12px;
     }
-     .process-section {
+
+    .process-section {
         padding: 60px 0;
     }
- 
+
     #processGallery {
         height: 340px;
         max-width: 380px;
     }
- 
+
     #processGalleryDividerV,
     .process-gallery__corner {
         display: none;
     }
- 
+
     #processStatsCard {
         left: 50%;
         transform: translateX(-50%);
         bottom: -24px;
         width: 220px;
     }
- 
+
     #processHeading {
         font-size: 24px;
         padding-bottom: 16px;
         margin-bottom: 28px;
     }
- 
+
     #processStepsList {
         gap: 20px;
         margin-bottom: 28px;
     }
- 
+
     .process-step__icon {
         width: 40px;
         height: 40px;
         font-size: 14px;
     }
- 
+
     .process-step__title {
         font-size: 16px;
     }
- 
+
     #processCtaRow {
         gap: 20px;
+    }
+
+    /* CTA banner */
+    #cta-banner {
+        padding: 20px 0px;
+    }
+
+    #ctaBannerInner {
+        padding: 34px 14px;
+    }
+
+    #ctaBannerHeading {
+        font-size: 21px;
+    }
+
+    #ctaBannerText {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    #ctaBannerActions {
+        gap: 9px;
+    }
+
+    #ctaBtnBook,
+    #ctaBtnCall,
+    #ctaBtnWhatsapp {
+        padding: 10px 13px;
+        font-size: 11.5px;
+        gap: 6px;
+    }
+
+    /* FAQ */
+    #faq-section {
+        padding: 56px 0;
+    }
+
+    #faqHeading {
+        font-size: 24px;
+        margin-bottom: 22px;
+    }
+
+    .faq-item__btn {
+        padding: 16px 18px;
+        font-size: 14.5px;
+    }
+
+    .faq-item__body {
+        padding: 0 18px 18px;
+        font-size: 13px;
+    }
+
+    #faqCtaBar {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 22px 20px;
+    }
+
+    #faqCtaBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Service area */
+    #area-section {
+        padding: 56px 0;
+    }
+
+    #areaHeadRow {
+        margin-bottom: 28px;
+    }
+
+    #areaHeading {
+        font-size: 25px;
+    }
+
+    #areaCoverCard {
+        padding: 22px 20px;
+    }
+
+    #areaCoverTitle {
+        font-size: 18px;
+    }
+
+    .area-cover-list__item {
+        padding: 7px 13px;
+        font-size: 12px;
+    }
+
+    #areaTrustCard {
+        padding: 24px 22px;
+    }
+
+    .area-trust-stat__number {
+        font-size: 26px;
+    }
+
+    #areaCallBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    #areaCallBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    #areaMapBox {
+        min-height: 300px;
+    }
+
+    /* Book service */
+    #book-section {
+        padding: 56px 0;
+    }
+
+    #bookHead {
+        margin-bottom: 32px;
+    }
+
+    #bookHeading {
+        font-size: 25px;
+    }
+
+    #bookInfoCard {
+        padding: 28px 22px;
+    }
+
+    #bookInfoTitle {
+        font-size: 21px;
+    }
+
+    #bookFormCard {
+        padding: 26px 20px;
+    }
+
+    #bookFormTitle {
+        font-size: 23px;
+    }
+
+    #bookFormSub {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    .book-form__input {
+        padding: 13px 16px;
+    }
+
+    .book-form__submit {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer-row {
+        padding: 48px 0 28px;
+    }
+
+    .footer-col__title {
+        margin-bottom: 18px;
+    }
+
+    #footerAbout {
+        max-width: 100%;
+    }
+
+    .footer-bottom__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
     }
 }
 
 
 /*  SMALL MOBILE (<= 575px)  */
 @media (max-width: 575px) {
-    .main-navbar__container {
+        .main-navbar__container {
         padding: 0 16px;
     }
-
+ 
     .site-logo__text {
         font-size: 17px;
+    }
+ 
+    .mobile-sidebar {
+        width: 300px;
     }
 
     .hero-slide,
@@ -263,45 +539,41 @@
     .mobile-sidebar {
         max-width: 300px;
     }
-      #processGallery {
+
+    #processGallery {
         height: 280px;
         max-width: 300px;
     }
- 
+
     #processStatsCard {
         width: 190px;
         padding: 16px 14px;
         gap: 10px;
     }
- 
+
     .process-stats-card__number {
         font-size: 20px;
     }
- 
+
     .process-stats-card__label {
         font-size: 11px;
     }
- 
+
     #processHeading {
         font-size: 21px;
     }
- 
+
     .process-step__desc {
         font-size: 13px;
     }
- 
+
     #processCtaRow {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
     }
-    @media (max-width: 991.98px) {
-    #services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 575.98px) {
+    /* Services grid → 1 column on small mobile */
     #services-grid {
         grid-template-columns: 1fr;
     }
@@ -309,5 +581,313 @@
     #services-section .services-title {
         font-size: 1.8rem;
     }
+
+    /* CTA banner */
+    #ctaBannerInner {
+        padding: 28px 10px;
+    }
+
+    #ctaBannerEyebrow {
+        font-size: 10px;
+        gap: 8px;
+    }
+
+    #ctaBannerHeading {
+        font-size: 17px;
+    }
+
+    #ctaBannerText {
+        font-size: 11.5px;
+        margin-bottom: 18px;
+    }
+
+    #ctaBannerActions {
+        gap: 6px;
+    }
+
+    #ctaBtnBook,
+    #ctaBtnCall,
+    #ctaBtnWhatsapp {
+        padding: 8px 10px;
+        font-size: 10px;
+        gap: 4px;
+        letter-spacing: 0;
+    }
+
+    /* FAQ */
+    #faqHeading {
+        font-size: 21px;
+    }
+
+    .faq-item__btn {
+        font-size: 13.5px;
+        padding: 14px 16px;
+    }
+
+    /* Service area */
+    #areaHeading {
+        font-size: 22px;
+    }
+
+    #areaTrustGrid {
+        gap: 20px 16px;
+    }
+
+    .area-trust-stat__number {
+        font-size: 23px;
+    }
+
+    /* Book service */
+    #bookEyebrow {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    #bookHeading {
+        font-size: 22px;
+    }
+
+    .book-info-item__icon {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    #bookFormBadge {
+        font-size: 12px;
+    }
+
+    #bookFormTitle {
+        font-size: 21px;
+    }
+
+    /* Footer */
+    .footer-row {
+        padding: 40px 0 24px;
+    }
+
+    .footer-logo__text {
+        font-size: 20px;
+    }
+
+    .footer-col__title {
+        font-size: 16px;
+    }
+
+    .footer-bottom__legal {
+        gap: 16px;
+    }
+    /* Mobile sidebar + overlay: desktop-এ সম্পূর্ণ লুকানো */
+
+    /* ============================================================
+   MOTOR SERVICE — SERVICES PAGE RESPONSIVE
+   Desktop-first. Only media-query overrides live here.
+   Breakpoints mirror responsive.css (1199 / 991 / 767 / 575).
+   ============================================================ */
+
+@media (max-width: 1199px) {
+    #pageHeroHeading {
+        font-size: 38px;
+    }
+
+    /* Why grid → 2 columns */
+    #whyGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+
+/*  TABLET (<= 991px)  */
+@media (max-width: 991px) {
+    #page-hero {
+        padding: 60px 0 54px;
+    }
+
+    #pageHeroHeading {
+        font-size: 32px;
+    }
+
+    #pageHeroText {
+        font-size: 15px;
+    }
+
+    /* Services grid → 2 columns on tablet */
+    .services-page {
+        padding: 70px 0;
+    }
+
+    .services-page #services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why section */
+    #why-section {
+        padding: 70px 0;
+    }
+
+    #whyHeading {
+        font-size: 28px;
+    }
+}
+
+
+/*  MOBILE (<= 767px)  */
+@media (max-width: 767px) {
+    #page-hero {
+        padding: 48px 0 44px;
+    }
+
+    .page-hero__glow {
+        width: 320px;
+        height: 320px;
+        top: -100px;
+        right: -100px;
+    }
+
+    #pageHeroHeading {
+        font-size: 26px;
+    }
+
+    #pageHeroText {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .page-hero__crumb {
+        font-size: 13px;
+    }
+
+    /* Services */
+    .services-page {
+        padding: 56px 0;
+    }
+
+    .services-page .services-heading {
+        margin-bottom: 40px;
+    }
+
+    .services-page .services-title {
+        font-size: 1.9rem;
+    }
+
+    .services-page .services-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Why section */
+    #why-section {
+        padding: 56px 0;
+    }
+
+    #whyHeading {
+        font-size: 24px;
+    }
+
+    #whyGrid {
+        gap: 18px;
+    }
+
+    .why-card {
+        padding: 26px 22px;
+    }
+}
+
+
+/*  SMALL MOBILE (<= 575px)  */
+@media (max-width: 575px) {
+    #pageHeroHeading {
+        font-size: 22px;
+    }
+
+    #pageHeroEyebrow {
+        font-size: 13px;
+    }
+
+    /* Services grid → 1 column */
+    .services-page #services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page .services-title {
+        font-size: 1.7rem;
+    }
+
+    /* Why grid → 1 column */
+    #whyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    #whyHeading {
+        font-size: 22px;
+    }
+}
+
+/* ---- Our Process: tablet → 2 cols ---- */
+@media (max-width: 991px) {
+    #proc-section {
+        padding: 70px 0;
+    }
+    #procSteps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+    }
+    /* hide the horizontal line once it wraps */
+    #procSteps::before {
+        display: none;
+    }
+    #procHeading {
+        font-size: 28px;
+    }
+}
+
+/* ---- Our Process: mobile → single vertical column ---- */
+@media (max-width: 575px) {
+    #procSteps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    #procHeading {
+        font-size: 24px;
+    }
+}
+/* ---- Rewind vs Replace ---- */
+@media (max-width: 991px) {
+    #vs-section {
+        padding: 70px 0;
+    }
+    #vsHeading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* stack the two compare cards */
+    #vsGrid {
+        grid-template-columns: 1fr;
+    }
+    /* stack the callout */
+    #vsCallout {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 22px 20px;
+    }
+    #vsCalloutBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    #vsHeading {
+        font-size: 24px;
+    }
+    .vs-card {
+        padding: 26px 22px;
+    }
+    .vs-card__title {
+        font-size: 18px;
+    }
+}
+
 }

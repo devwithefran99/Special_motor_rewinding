@@ -30,40 +30,39 @@
 </head>
 <body>
 
-    <!-- HEADER / NAVBAR START -->
-    <!-- COMPONENT: header-navbar -->
-    <header id="site-header" class="site-header">
-        <nav id="main-navbar" class="main-navbar navbar navbar-expand-lg">
-            <div class="container-fluid main-navbar__container">
+ <!-- HEADER / NAVBAR START -->
+<!-- COMPONENT: header-navbar -->
+<header id="site-header" class="site-header">
+    <nav id="main-navbar" class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid main-navbar__container">
 
-                <!-- Logo (placeholder slot - client logo to be added) -->
-                <a id="site-logo" class="site-logo" href="index.html" aria-label="Motor Service - Home">
-                    <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
-                </a>
+            <!-- Logo -->
+            <a id="site-logo" class="navbar-brand site-logo" href="index.html" aria-label="Motor Service - Home">
+                <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
+            </a>
 
-                <!-- Mobile Hamburger Toggle -->
-                <button id="navbarToggleBtn" class="navbar-toggle-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileSidebar">
-                    <span class="navbar-toggle-btn__bar"></span>
-                    <span class="navbar-toggle-btn__bar"></span>
-                    <span class="navbar-toggle-btn__bar"></span>
-                </button>
+            <!-- Mobile Hamburger (opens offcanvas) -->
+            <button id="navbarToggleBtn" class="navbar-toggler navbar-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar" aria-label="Open navigation menu">
+                <span class="navbar-toggle-btn__bar"></span>
+                <span class="navbar-toggle-btn__bar"></span>
+                <span class="navbar-toggle-btn__bar"></span>
+            </button>
 
-                <!-- Desktop Center Navigation -->
-                <ul id="mainNavList" class="main-nav-list">
-                    <li class="main-nav-list__item">
-                        <a href="index.html" class="main-nav-list__link is-active" data-nav-link>Home</a>
+            <!-- Desktop Nav (center) -->
+            <div id="navbarCollapse" class="collapse navbar-collapse main-navbar__collapse">
+                <ul id="mainNavList" class="navbar-nav main-nav-list mx-auto">
+                    <li class="nav-item main-nav-list__item">
+                        <a href="index.html" class="nav-link main-nav-list__link" data-nav-link>Home</a>
                     </li>
-                    <li class="main-nav-list__item">
-                        <a href="services.html" class="main-nav-list__link" data-nav-link>Services</a>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="services.html" class="nav-link main-nav-list__link" data-nav-link>Services</a>
                     </li>
-                    <li class="main-nav-list__item">
-                        <a href="about.html" class="main-nav-list__link" data-nav-link>About Us</a>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="about.html" class="nav-link main-nav-list__link" data-nav-link>About Us</a>
                     </li>
-                    <li class="main-nav-list__item">
-                        <a href="contact.html" class="main-nav-list__link" data-nav-link>Contact Us</a>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="contact.html" class="nav-link main-nav-list__link" data-nav-link>Contact Us</a>
                     </li>
-                    <!-- Sliding pill indicator (position set via JS) -->
-                    <li class="main-nav-list__pill" aria-hidden="true"></li>
                 </ul>
 
                 <!-- Desktop Right Actions -->
@@ -75,36 +74,33 @@
                     <a href="quote.html" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar Overlay -->
-    <div id="sidebarOverlay" class="sidebar-overlay"></div>
-
-    <!-- Mobile Sidebar Navigation -->
-    <!-- COMPONENT: mobile-sidebar -->
-    <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
-        <div class="mobile-sidebar__top">
-            <a href="index.html" class="site-logo site-logo--sidebar" aria-label="Motor Service - Home">
-                <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
-            </a>
-            <button id="sidebarCloseBtn" class="mobile-sidebar__close" type="button" aria-label="Close navigation menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
         </div>
+    </nav>
+</header>
 
-        <ul id="mobileNavList" class="mobile-nav-list">
-            <li class="mobile-nav-list__item">
-                <a href="index.html" class="mobile-nav-list__link is-active" data-nav-link>Home</a>
+<!-- Mobile Offcanvas Sidebar (Bootstrap) -->
+<!-- COMPONENT: mobile-sidebar -->
+<div id="mobileSidebar" class="offcanvas offcanvas-start mobile-sidebar" tabindex="-1" aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas-header mobile-sidebar__top">
+        <a href="index.html" class="site-logo site-logo--sidebar" aria-label="Motor Service - Home">
+            <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
+        </a>
+        <button type="button" class="btn-close mobile-sidebar__close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body mobile-sidebar__body">
+        <ul id="mobileNavList" class="navbar-nav mobile-nav-list">
+            <li class="nav-item mobile-nav-list__item">
+                <a href="index.html" class="nav-link mobile-nav-list__link" data-bs-dismiss="offcanvas">Home</a>
             </li>
-            <li class="mobile-nav-list__item">
-                <a href="services.html" class="mobile-nav-list__link" data-nav-link>Services</a>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="services.html" class="nav-link mobile-nav-list__link" data-bs-dismiss="offcanvas">Services</a>
             </li>
-            <li class="mobile-nav-list__item">
-                <a href="about.html" class="mobile-nav-list__link" data-nav-link>About Us</a>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="about.html" class="nav-link mobile-nav-list__link" data-bs-dismiss="offcanvas">About Us</a>
             </li>
-            <li class="mobile-nav-list__item">
-                <a href="contact.html" class="mobile-nav-list__link" data-nav-link>Contact Us</a>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="contact.html" class="nav-link mobile-nav-list__link" data-bs-dismiss="offcanvas">Contact Us</a>
             </li>
         </ul>
 
@@ -115,12 +111,13 @@
             </a>
             <a href="quote.html" class="navbar-actions__cta navbar-actions__cta--sidebar">Book A Service</a>
         </div>
-    </aside>
-    <!-- HEADER / NAVBAR END -->
+    </div>
+</div>
+<!-- HEADER / NAVBAR END -->
 
 
-    <!-- HERO SECTION START -->
-    <!-- COMPONENT: hero-section -->
+   <main>
+     <!-- HERO SECTION START -->
     <section id="hero-section" class="hero-section">
         <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-pause="hover">
             <div class="carousel-inner">
@@ -217,7 +214,6 @@
  
  
     <!--  PROCESS SECTION START  -->
-    <!-- COMPONENT: process-section -->
     <section id="process-section" class="process-section">
         <div class="container">
             <div id="processGrid" class="row process-grid align-items-center">
@@ -437,6 +433,443 @@
 </section>
 <!--  SERVICES SECTION END  -->
 
+<!-- COMPONENT: cta-banner -->
+<section id="cta-banner" class="cta-banner">
+    <div id="ctaBannerInner" class="cta-banner__inner">
+        <p id="ctaBannerEyebrow" class="cta-banner__eyebrow">
+            <span class="cta-banner__eyebrow-line"></span>
+            Get Started
+            <span class="cta-banner__eyebrow-line"></span>
+        </p>
+
+        <h2 id="ctaBannerHeading" class="cta-banner__heading">Motor Failure? We Fix It Fast.</h2>
+
+        <p id="ctaBannerText" class="cta-banner__text">
+            Our engineers are ready. Workshop pickup, on-site repair, or emergency response — whatever you need, we deliver.
+        </p>
+
+        <div id="ctaBannerActions" class="cta-banner__actions">
+            <a id="ctaBtnBook" href="quote.html" class="cta-banner__btn">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Book A Service</span>
+            </a>
+            <a id="ctaBtnCall" href="tel:+971501234567" class="cta-banner__btn">
+                <span>Call +971 50 123 4567</span>
+            </a>
+            <a id="ctaBtnWhatsapp" href="https://wa.me/971501234567" class="cta-banner__btn" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Whatsapp Us</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!--  CTA BANNER SECTION END  -->
+
+
+
+<!--  FAQ SECTION START  -->
+<section id="faq-section" class="faq-section">
+    <div class="container">
+        <div id="faqRow" class="row align-items-start">
+
+            <!-- FAQ Image (Left) — hidden on mobile -->
+            <div id="faqImageCol" class="col-lg-4">
+                <!-- COMPONENT: faq-image -->
+                <div id="faqImageBox" class="faq-image-box">
+                    <!-- Placeholder slot — replace src with real image later -->
+                    <img id="faqImage" class="faq-image-box__img" src="assets/image/ring.png" alt="Motor repair workshop team">
+                </div>
+            </div>
+
+            <!-- FAQ Content (Right) -->
+            <div id="faqContentCol" class="col-lg-8">
+                <p id="faqEyebrow" class="faq-content__eyebrow">
+                    <span class="faq-content__eyebrow-line"></span>
+                    Got Questions
+                </p>
+
+                <h2 id="faqHeading" class="faq-content__heading">Frequently Asked Questions</h2>
+
+                <!-- COMPONENT: faq-accordion -->
+                <div id="faqAccordion" class="faq-accordion accordion">
+
+                    <div class="faq-item accordion-item">
+                        <h3 class="faq-item__header accordion-header">
+                            <button class="faq-item__btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                                What types of electric motors do you repair?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse1" class="faq-item__collapse accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-item__body accordion-body">
+                                We repair and rewind AC and DC motors, submersible pumps, compressors, generators, and all types of industrial electric motors across Abu Dhabi and Mussafah.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item accordion-item">
+                        <h3 class="faq-item__header accordion-header">
+                            <button class="faq-item__btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                How long does a motor repair usually take?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse2" class="faq-item__collapse accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-item__body accordion-body">
+                                Most standard repairs are completed within 1–3 working days. Turnaround depends on motor size, fault type, and parts availability — we always confirm a timeline upfront.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item accordion-item">
+                        <h3 class="faq-item__header accordion-header">
+                            <button class="faq-item__btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                Do you provide on-site motor maintenance service?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse3" class="faq-item__collapse accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-item__body accordion-body">
+                                Yes! We offer on-site preventive maintenance and emergency repair services for factories, industrial plants, and commercial facilities. Our mobile team can reach you quickly with the right tools and spare parts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item accordion-item">
+                        <h3 class="faq-item__header accordion-header">
+                            <button class="faq-item__btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                Is there a warranty on your repair work?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse4" class="faq-item__collapse accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-item__body accordion-body">
+                                Absolutely. All our motor repair and rewinding work is covered by a service warranty. Warranty duration varies by service type and is confirmed on your job sheet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item accordion-item">
+                        <h3 class="faq-item__header accordion-header">
+                            <button class="faq-item__btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                How do I get a cost estimate before the repair?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse5" class="faq-item__collapse accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="faq-item__body accordion-body">
+                                Simply call us or send your motor details via WhatsApp. After a quick inspection, we provide a clear, no-obligation cost estimate before any work begins.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COMPONENT: faq-cta-bar -->
+                <div id="faqCtaBar" class="faq-cta-bar">
+                    <div class="faq-cta-bar__text">
+                        <strong class="faq-cta-bar__title">Still Have Doubts?</strong>
+                        <span class="faq-cta-bar__subtitle">Talk to our motor service experts — we're happy to help.</span>
+                    </div>
+                    <a id="faqCtaBtn" href="quote.html" class="faq-cta-bar__btn">Get A Quote</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--  FAQ SECTION END  -->
+
+<!--  SERVICE AREA SECTION START  -->
+<section id="area-section" class="area-section">
+    <div class="container">
+
+        <!-- Heading Row -->
+        <div id="areaHeadRow" class="row align-items-end">
+            <div class="col-lg-7">
+                <p id="areaEyebrow" class="area-head__eyebrow">
+                    <span class="area-head__eyebrow-line"></span>
+                    Our Service Area
+                </p>
+                <h2 id="areaHeading" class="area-head__heading">
+                    Our Work Zone<br>
+                    <span id="areaHeadingAccent" class="area-head__heading-accent">&amp; Service Area</span>
+                </h2>
+            </div>
+            <div class="col-lg-5">
+                <p id="areaSubtitle" class="area-head__subtitle">
+                    We proudly serve all districts and industrial zones across <strong>Abu Dhabi</strong>. Wherever your motor needs attention — we're there.
+                </p>
+            </div>
+        </div>
+
+        <!-- Map + Content Row -->
+        <div id="areaBodyRow" class="row align-items-stretch">
+
+            <!-- Map (Left) -->
+            <div id="areaMapCol" class="col-lg-6">
+                <!-- COMPONENT: area-map -->
+                <div id="areaMapBox" class="area-map-box">
+                     <iframe
+                        id="areaMapFrame"
+                        class="area-map-box__frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4509.755738318827!2d54.4969179!3d24.370700499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e415c6d7df5c1%3A0x4ad394877eec494a!2sSpecial%20Motor%20Winding!5e1!3m2!1sen!2sbd!4v1783235503231!5m2!1sen!2sbd"
+                        title="Special Motor Winding — Abu Dhabi"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Content (Right) -->
+            <div id="areaContentCol" class="col-lg-6">
+
+                <!-- COMPONENT: areas-we-cover-card -->
+                <div id="areaCoverCard" class="area-cover-card">
+                    <h3 id="areaCoverTitle" class="area-cover-card__title">Areas We Cover</h3>
+                    <p id="areaCoverSub" class="area-cover-card__sub">All locations across Abu Dhabi Emirate</p>
+                    <ul id="areaCoverList" class="area-cover-list">
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Abu Dhabi City</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Mussafah</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> ICAD</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Khalifa City</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Al Reem Island</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Yas Island</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Baniyas</li>
+                        <li class="area-cover-list__item"><i class="fa-solid fa-location-dot"></i> Madinat Zayed</li>
+                    </ul>
+                </div>
+
+                <!-- COMPONENT: trust-stats-card -->
+                <div id="areaTrustCard" class="area-trust-card">
+                    <h3 id="areaTrustTitle" class="area-trust-card__title">Why Clients Trust Us</h3>
+                    <div id="areaTrustGrid" class="area-trust-grid">
+                        <div class="area-trust-stat">
+                            <span class="area-trust-stat__number"><span class="area-trust-stat__count" data-count-to="15">0</span>+</span>
+                            <span class="area-trust-stat__label">Years in Abu Dhabi</span>
+                        </div>
+                        <div class="area-trust-stat">
+                            <span class="area-trust-stat__number"><span class="area-trust-stat__count" data-count-to="5000">0</span>+</span>
+                            <span class="area-trust-stat__label">Motors Repaired</span>
+                        </div>
+                        <div class="area-trust-stat">
+                            <span class="area-trust-stat__number"><span class="area-trust-stat__count" data-count-to="24">0</span>/7</span>
+                            <span class="area-trust-stat__label">Emergency Service</span>
+                        </div>
+                        <div class="area-trust-stat">
+                            <span class="area-trust-stat__number"><span class="area-trust-stat__count" data-count-to="100">0</span>%</span>
+                            <span class="area-trust-stat__label">Coverage Area</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPONENT: area-call-bar -->
+                <div id="areaCallBar" class="area-call-bar">
+                    <div class="area-call-bar__text">
+                        <strong class="area-call-bar__title">Need service at your location?</strong>
+                        <span class="area-call-bar__sub">We'll come to you — fast!</span>
+                    </div>
+                    <a id="areaCallBtn" href="tel:+971501234567" class="area-call-bar__btn">Call Now</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--  SERVICE AREA SECTION END  -->
+
+<!--  BOOK SERVICE SECTION START  -->
+<section id="book-section" class="book-section">
+    <div class="container">
+
+        <!-- Heading -->
+        <div id="bookHead" class="book-head">
+            <p id="bookEyebrow" class="book-head__eyebrow">
+                <span class="book-head__eyebrow-line"></span>
+                Book A Service
+                <span class="book-head__eyebrow-line"></span>
+            </p>
+            <h2 id="bookHeading" class="book-head__heading">Let's Fix <span class="book-head__heading-accent">Your Motor</span></h2>
+        </div>
+
+        <div id="bookRow" class="row align-items-stretch">
+
+            <!-- Contact Information (Left) -->
+            <div id="bookInfoCol" class="col-lg-4">
+                <!-- COMPONENT: contact-info-card -->
+                <div id="bookInfoCard" class="book-info-card">
+                    <h3 id="bookInfoTitle" class="book-info-card__title">Contact Information</h3>
+                    <p id="bookInfoText" class="book-info-card__text">
+                        Need motor repair or maintenance service? Our expert engineers are ready to help you with fast, reliable solutions. Reach out anytime.
+                    </p>
+
+                    <ul id="bookInfoList" class="book-info-list">
+                        <li class="book-info-item">
+                            <span class="book-info-item__icon"><i class="fa-solid fa-phone"></i></span>
+                            <div class="book-info-item__body">
+                                <span class="book-info-item__label">Phone Number</span>
+                                <a href="tel:+8801712345678" class="book-info-item__value">+880 1712-345678</a>
+                            </div>
+                        </li>
+                        <li class="book-info-item">
+                            <span class="book-info-item__icon"><i class="fa-solid fa-envelope"></i></span>
+                            <div class="book-info-item__body">
+                                <span class="book-info-item__label">Email Address</span>
+                                <a href="mailto:service@motorfix.com" class="book-info-item__value">service@motorfix.com</a>
+                            </div>
+                        </li>
+                        <li class="book-info-item">
+                            <span class="book-info-item__icon"><i class="fa-solid fa-clock"></i></span>
+                            <div class="book-info-item__body">
+                                <span class="book-info-item__label">Working Hours</span>
+                                <span class="book-info-item__value">Sat – Thu: 8:00 AM – 7:00 PM</span>
+                            </div>
+                        </li>
+                        <li class="book-info-item">
+                            <span class="book-info-item__icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <div class="book-info-item__body">
+                                <span class="book-info-item__label">Our Workshop</span>
+                                <span class="book-info-item__value">42 Industrial Zone, Nasirabad, Chattogram</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Form (Right) -->
+            <div id="bookFormCol" class="col-lg-8">
+                <!-- COMPONENT: book-form-card -->
+                <div id="bookFormCard" class="book-form-card">
+                    <span id="bookFormBadge" class="book-form-card__badge">
+                        <i class="fa-solid fa-plus"></i> Get In Touch
+                    </span>
+                    <h3 id="bookFormTitle" class="book-form-card__title">Book a Service</h3>
+                    <p id="bookFormSub" class="book-form-card__sub">
+                        Tell us about your motor issue and we'll get back to you with the best repair or maintenance plan — fast turnaround, expert engineers.
+                    </p>
+
+                    <form id="bookForm" class="book-form" action="#" method="post" novalidate>
+                        <div class="row book-form__row">
+                            <div class="col-md-6 book-form__group">
+                                <input id="bookFieldName" class="book-form__input" type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 book-form__group">
+                                <input id="bookFieldPhone" class="book-form__input" type="tel" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col-md-6 book-form__group">
+                                <input id="bookFieldLocation" class="book-form__input" type="text" name="location" placeholder="Your Location">
+                            </div>
+                            <div class="col-md-6 book-form__group">
+                                <select id="bookFieldService" class="book-form__input book-form__select" name="service" required>
+                                    <option value="" disabled selected>Choose A Service</option>
+                                    <option value="chiller-compressor-winding">All Chiller Compressor Winding</option>
+                                    <option value="water-pump-repairing">All Water Pump Repairing</option>
+                                    <option value="electric-motor-rewinding">All Electric Motor Rewinding</option>
+                                    <option value="generator-repair">Generator Repair Service</option>
+                                    <option value="ac-dc-motor-rewinding">A/C &amp; DC Motor Rewinding</option>
+                                    <option value="drill-grinder-repairing">Drill &amp; Grinder Machine Repairing</option>
+                                </select>
+                            </div>
+                            <div class="col-12 book-form__group">
+                                <textarea id="bookFieldMessage" class="book-form__input book-form__textarea" name="message" rows="4" placeholder="Describe your motor issue or service request..."></textarea>
+                            </div>
+                        </div>
+
+                        <button id="bookSubmitBtn" class="book-form__submit" type="submit">
+                            Send Request <span class="book-form__submit-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--  BOOK SERVICE SECTION END  -->
+   </main>
+
+<!--  FOOTER SECTION START  -->
+<footer id="site-footer" class="site-footer">
+    <div class="container">
+
+        <div id="footerRow" class="row footer-row">
+
+            <!-- Brand / About -->
+            <div class="col-lg-4 col-md-6 footer-col">
+                <a id="footerLogo" class="footer-logo" href="index.html" aria-label="Motor Service - Home">
+                    <span class="footer-logo__text">MOTOR<span class="footer-logo__accent">SERVICE</span></span>
+                </a>
+                <p id="footerAbout" class="footer-about">
+                    Professional motor winding, repair, and maintenance solutions for AC/DC motors, pumps, compressors, and industrial equipment across Abu Dhabi &amp; Mussafah.
+                </p>
+                <ul id="footerSocials" class="footer-socials">
+                    <li><a href="#" class="footer-socials__link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 footer-col">
+                <h3 class="footer-col__title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-links__link">Home</a></li>
+                    <li><a href="services.html" class="footer-links__link">Services</a></li>
+                    <li><a href="about.html" class="footer-links__link">About Us</a></li>
+                    <li><a href="contact.html" class="footer-links__link">Contact Us</a></li>
+                    <li><a href="quote.html" class="footer-links__link">Book A Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h3 class="footer-col__title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="service-details.html?service=chiller-compressor-winding" class="footer-links__link">Chiller Compressor Winding</a></li>
+                    <li><a href="service-details.html?service=water-pump-repairing" class="footer-links__link">Water Pump Repairing</a></li>
+                    <li><a href="service-details.html?service=electric-motor-rewinding" class="footer-links__link">Electric Motor Rewinding</a></li>
+                    <li><a href="service-details.html?service=generator-repair" class="footer-links__link">Generator Repair</a></li>
+                    <li><a href="service-details.html?service=ac-dc-motor-rewinding" class="footer-links__link">A/C &amp; DC Motor Rewinding</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h3 class="footer-col__title">Get In Touch</h3>
+                <ul id="footerContact" class="footer-contact">
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>42 Industrial Zone, Mussafah,<br>Abu Dhabi, UAE</span>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+971501234567">+971 50 123 4567</a>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@motorservice.ae">info@motorservice.ae</a>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Sat – Thu: 8:00 AM – 7:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div id="footerBottom" class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__inner">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Motor Service. All rights reserved.</p>
+                <ul class="footer-bottom__legal">
+                    <li><a href="#" class="footer-bottom__link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-bottom__link">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--  FOOTER SECTION END  -->
 
     <!-- BOOTSTRAP + JQUERY + AOS CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
