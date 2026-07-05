@@ -14,6 +14,15 @@ $(function () {
         once: true
     });
 
+    /*  MOBILE SIDEBAR — link click করলে navigate হবে  */
+document.querySelectorAll('#mobileNavList .mobile-nav-list__link').forEach(function (link) {
+    link.addEventListener('click', function () {
+        const sidebar = document.getElementById('mobileSidebar');
+        const instance = bootstrap.Offcanvas.getInstance(sidebar);
+        if (instance) instance.hide();
+    });
+});
+
     /*  FOOTER YEAR (all pages)  */
     var yearEl = document.getElementById('footerYear');
     if (yearEl) {
