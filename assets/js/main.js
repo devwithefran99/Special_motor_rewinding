@@ -22,6 +22,31 @@ document.querySelectorAll('#mobileNavList .mobile-nav-list__link').forEach(funct
         if (instance) instance.hide();
     });
 });
+/*  FAQ ACCORDION (service detail pages) — single-open behaviour  */
+    var faqToggles = document.querySelectorAll('[data-faq-toggle]');
+    if (faqToggles.length) {
+        faqToggles.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = btn.closest('.sd-faq-item');
+                if (!item) return;
+                var answer = item.querySelector('.sd-faq-item__a');
+                var isOpen = item.classList.contains('is-open');
+
+                // close all
+                document.querySelectorAll('.sd-faq-item').forEach(function (other) {
+                    other.classList.remove('is-open');
+                    var a = other.querySelector('.sd-faq-item__a');
+                    if (a) a.style.maxHeight = null;
+                });
+
+                // open clicked (if it wasn't already open)
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    }
 
     /*  FOOTER YEAR (all pages)  */
     var yearEl = document.getElementById('footerYear');
@@ -84,5 +109,58 @@ document.querySelectorAll('#mobileNavList .mobile-nav-list__link').forEach(funct
 
     observeCounters(document.getElementById('processStatsCard'));
     observeCounters(document.getElementById('areaTrustGrid'));
+     observeCounters(document.getElementById('statsBandInner'));   
+    observeCounters(document.getElementById('storyBadge'));       
 
 });
+
+/*  TESTIMONIALS SLIDER (homepage) — step one card every 2.5s, all screens  */
+    var $track = $('#tstTrack');
+    if ($track.length) {
+        var $cards = $track.children();
+        $track.append($cards.clone());                     // clone once for seamless loop
+
+        var pos = 0, paused = false, half = 0;
+
+        function measure() {                               // width of ONE real set
+            half = 0;
+            $track.children().slice(0, $cards.length).each(function () {
+                half += $(this).outerWidth() + parseFloat($(this).css('margin-right'));
+            });
+        }
+        function step() {
+            var $c = $track.children().first();
+            return $c.outerWidth() + parseFloat($c.css('margin-right'));
+        }
+
+        // measure after images/fonts settle, and on resize
+        $(window).on('load', measure);
+        setTimeout(measure, 300);
+        $(window).on('resize', measure);
+        measure();
+
+        function slide(dir) {                              // dir: -1 next, +1 prev
+            pos += dir * step();
+
+            // animate the move
+            $track.css({ 'transition': 'transform 0.6s ease',
+                         'transform': 'translateX(' + pos + 'px)' });
+
+            // AFTER the animation ends, if we've passed one full set,
+            // silently snap back with NO transition (invisible reset)
+            setTimeout(function () {
+                $track.css('transition', 'none');
+                if (pos <= -half) pos += half;
+                if (pos > 0)      pos -= half;
+                $track.css('transform', 'translateX(' + pos + 'px)');
+            }, 620);
+        }
+
+        setInterval(function () { if (!paused) slide(-1); }, 2500);
+
+        $('#tstMarquee').on('mouseenter touchstart', function () { paused = true; })
+                        .on('mouseleave touchend',  function () { paused = false; });
+
+        $('#tstNext').on('click', function () { slide(-1); });
+        $('#tstPrev').on('click', function () { slide(1); });
+    }

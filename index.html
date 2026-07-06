@@ -78,6 +78,26 @@
     </nav>
 </header>
 
+<!--  STICKY MOBILE BOTTOM CTA BAR START  -->
+<!-- COMPONENT: mobile-bottom-cta -->
+<!-- PLACEMENT: paste on EVERY page just before the closing </body> tag (after the footer). -->
+<!-- Mobile only — hidden on desktop via CSS. -->
+<div id="mobile-cta-bar" class="mobile-cta-bar">
+    <a href="tel:+971501234567" class="mobile-cta-bar__item mobile-cta-bar__item--call" aria-label="Call us">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+    </a>
+    <a href="https://wa.me/971501234567" class="mobile-cta-bar__item mobile-cta-bar__item--wa" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+    <a href="index.html#book-section" class="mobile-cta-bar__item mobile-cta-bar__item--book" aria-label="Book a service">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book Service</span>
+    </a>
+</div>
+<!--  STICKY MOBILE BOTTOM CTA BAR END  -->
+
 <!-- Mobile Offcanvas Sidebar (Bootstrap) -->
 <!-- COMPONENT: mobile-sidebar -->
 <div id="mobileSidebar" class="offcanvas offcanvas-start mobile-sidebar" tabindex="-1" aria-labelledby="mobileSidebarLabel">
@@ -354,7 +374,7 @@
 
         <div id="services-grid">
 
-            <a href="service-details.html?service=chiller-compressor-winding" class="service-card">
+            <a href="chiller-compressor-winding.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">All Chiller Compressor Winding</h3>
                     <p class="service-card-desc">Expert winding and repair for all types of chiller compressors to keep your cooling systems running reliably.</p>
@@ -366,7 +386,7 @@
                 <span class="service-card-icon"><i class="bi bi-cursor-fill"></i></span>
             </a>
 
-            <a href="service-details.html?service=water-pump-repairing" class="service-card">
+            <a href="water-pump-repairing.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">All Water Pump Repairing</h3>
                     <p class="service-card-desc">Complete pump motor servicing and repair for commercial and industrial water systems.</p>
@@ -378,7 +398,7 @@
                 <span class="service-card-icon"><i class="bi bi-cursor-fill"></i></span>
             </a>
 
-            <a href="service-details.html?service=electric-motor-rewinding" class="service-card">
+            <a href="electric-motor-rewinding.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">All Electric Motor Rewinding</h3>
                     <p class="service-card-desc">Professional rewinding and repair solutions for all categories of industrial electric motors.</p>
@@ -390,7 +410,7 @@
                 <span class="service-card-icon"><i class="bi bi-cursor-fill"></i></span>
             </a>
 
-            <a href="service-details.html?service=generator-repair" class="service-card">
+            <a href="generator-repair.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">Generator Repair Service</h3>
                     <p class="service-card-desc">Reliable generator repair and maintenance to keep your backup power systems running when you need them.</p>
@@ -402,7 +422,7 @@
                 <span class="service-card-icon"><i class="bi bi-cursor-fill"></i></span>
             </a>
 
-            <a href="service-details.html?service=ac-dc-motor-rewinding" class="service-card">
+            <a href="ac-dc-motor-rewinding.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">A/C &amp; DC Motor Rewinding</h3>
                     <p class="service-card-desc">Specialized rewinding services for both AC and DC motors across all voltage and power ratings.</p>
@@ -414,7 +434,7 @@
                 <span class="service-card-icon"><i class="bi bi-cursor-fill"></i></span>
             </a>
 
-            <a href="service-details.html?service=drill-grinder-repairing" class="service-card">
+            <a href="drill-grinder-repairing.html" class="service-card">
                 <div class="service-card-body">
                     <h3 class="service-card-title">All types of Drill &amp; Grinder Machine Repairing</h3>
                     <p class="service-card-desc">Reliable repair and servicing for drill machines, angle grinders, and all types of power tools.</p>
@@ -780,6 +800,131 @@
     </div>
 </section>
 <!--  BOOK SERVICE SECTION END  -->
+
+
+<!--  TESTIMONIALS SECTION START  -->
+<!-- COMPONENT: testimonials-marquee -->
+<!-- PLACEMENT: paste in index.html between BOOK SERVICE SECTION END and FOOTER SECTION START -->
+<!-- NOTE: the track is duplicated once in JS for a seamless loop — only write each real card ONCE below. -->
+<section id="tst-section" class="tst-section">
+    <div class="container">
+
+        <div id="tstHead" class="tst-head">
+            <p id="tstEyebrow" class="tst-head__eyebrow">
+                <span class="tst-head__eyebrow-line"></span>
+                Client Reviews
+                <span class="tst-head__eyebrow-line"></span>
+            </p>
+            <h2 id="tstHeading" class="tst-head__heading">What Our <span class="tst-head__heading-accent">Customers Say</span></h2>
+            <p id="tstSubtitle" class="tst-head__subtitle">Workshop and shop owners across Abu Dhabi &amp; Mussafah trust us to keep their motors running. Here's what a few of them had to say.</p>
+        </div>
+    </div>
+
+   <div class="container">
+     <!-- Marquee viewport is full-width (outside container) so cards can scroll edge to edge -->
+    <div id="tstMarquee" class="tst-marquee">
+
+        <!-- Arrows -->
+        <button id="tstPrev" class="tst-marquee__arrow tst-marquee__arrow--prev" type="button" aria-label="Previous reviews">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button id="tstNext" class="tst-marquee__arrow tst-marquee__arrow--next" type="button" aria-label="Next reviews">
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+
+        <!-- Track (JS clones these cards once for a seamless loop) -->
+        <div id="tstTrack" class="tst-track">
+
+            <!-- COMPONENT: testimonial-card -->
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">My chiller compressor burnt out during summer and I thought I'd have to buy a new one. They rewound it in three days for a fraction of the cost — running cold ever since.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">RA</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Rashid Al Mansoori</span>
+                        <span class="tst-card__role">Cold Store, Mussafah</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">Our water pump motor failed and they picked it up the same day. Repaired, pressure-tested, and back in two days. Honest pricing and proper work — highly recommended.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">SK</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Suresh Kumar</span>
+                        <span class="tst-card__role">Building Maintenance, Abu Dhabi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">I run a small fabrication shop and my grinders take a beating. They rewind the armatures and change the brushes fast, every time. My tools last far longer now.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">MI</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Mohammed Iqbal</span>
+                        <span class="tst-card__role">Fabrication Workshop, Mussafah</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">Our backup generator wouldn't produce power before a big event. They diagnosed the alternator, rewound it, and load-tested it on site. Saved us at the last minute.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">AH</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Ahmed Hassan</span>
+                        <span class="tst-card__role">Event Services, Abu Dhabi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">Brought in an old three-phase motor everyone told me to scrap. They rewound it to spec and it runs like new. Great value and they explained everything clearly.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">JT</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Joseph Thomas</span>
+                        <span class="tst-card__role">Machine Shop, Mussafah</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tst-card">
+                <div class="tst-card__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="tst-card__text">Fast, reliable, and fair. My drill stopped working mid-job and they fixed the armature and brushes the next day. This is my go-to workshop now.</p>
+                <div class="tst-card__person">
+                    <span class="tst-card__avatar">FA</span>
+                    <div class="tst-card__meta">
+                        <span class="tst-card__name">Faisal Ahmed</span>
+                        <span class="tst-card__role">Carpentry Workshop, Abu Dhabi</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   </div>
+</section>
+<!--  TESTIMONIALS SECTION END  -->
    </main>
 
 <!--  FOOTER SECTION START  -->
@@ -860,8 +1005,8 @@
             <div class="footer-bottom__inner">
                 <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Motor Service. All rights reserved.</p>
                 <ul class="footer-bottom__legal">
-                    <li><a href="#" class="footer-bottom__link">Privacy Policy</a></li>
-                    <li><a href="#" class="footer-bottom__link">Terms of Service</a></li>
+                    <li><a href="legal.html" class="footer-bottom__link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer-bottom__link">Terms of Service</a></li>
                 </ul>
             </div>
         </div>

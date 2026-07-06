@@ -891,3 +891,435 @@
 }
 
 }
+/* ============================================================
+   ABOUT PAGE — RESPONSIVE OVERRIDES
+   Desktop defaults live in about.css. Mobile-down only here.
+   ============================================================ */
+
+/* ---- Tablet / small desktop ---- */
+@media (max-width: 991px) {
+
+    /* Page hero */
+    #pageHeroHeading {
+        font-size: 34px;
+    }
+
+    /* Story: stack image over text */
+    #story-section {
+        padding: 72px 0;
+    }
+
+    #storyGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    #storyMedia {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .story-body__heading,
+    .values-head__heading {
+        font-size: 28px;
+    }
+
+    /* Stats band: 2 x 2, drop dividers */
+    #stats-band {
+        padding: 54px 0;
+    }
+
+    #statsBandInner {
+        flex-wrap: wrap;
+        gap: 36px 16px;
+    }
+
+    .stat-item {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    .stat-item__divider {
+        display: none;
+    }
+
+    .stat-item__num {
+        font-size: 36px;
+    }
+
+    /* Values: stack, drop sticky */
+    #values-section {
+        padding: 72px 0;
+    }
+
+    #valuesLayout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #valuesHead {
+        position: static;
+        top: auto;
+    }
+
+    .values-head__text {
+        max-width: 100%;
+    }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 767px) {
+
+    #story-section {
+        padding: 60px 0;
+    }
+
+    .story-media__main img {
+        height: 340px;
+    }
+
+    .story-media__sub img {
+        height: 140px;
+    }
+
+    #storyBadge {
+        top: 16px;
+        left: 12px;
+        padding: 14px 18px;
+    }
+
+    .story-badge__num {
+        font-size: 28px;
+    }
+
+    .story-body__heading {
+        font-size: 26px;
+    }
+
+    .story-body__actions {
+        gap: 12px;
+    }
+
+    .story-body__btn {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    /* Value rows: icon moves out of the way, tighter gap */
+    .value-row {
+        gap: 16px;
+        padding: 22px 0;
+    }
+
+    .value-row__num {
+        min-width: 32px;
+        font-size: 19px;
+    }
+
+    .value-row__icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .value-row:hover {
+        transform: none;
+    }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 575px) {
+
+    #pageHeroHeading {
+        font-size: 28px;
+    }
+
+    /* Stats band: single column */
+    .stat-item {
+        flex: 0 0 100%;
+    }
+
+    #statsBandInner {
+        gap: 28px;
+    }
+
+    .story-media__main img {
+        height: 260px;
+    }
+
+    #storyMedia {
+        padding-right: 24px;
+        padding-bottom: 30px;
+    }
+
+    /* Hide the small overlap image on very narrow screens for clarity */
+    .story-media__sub {
+        width: 52%;
+    }
+
+    .story-media__sub img {
+        height: 120px;
+    }
+
+    .story-body__heading,
+    .values-head__heading {
+        font-size: 24px;
+    }
+
+    .value-row__icon {
+        display: none;
+    }
+}
+/* ============================================================
+   CONTACT PAGE — RESPONSIVE OVERRIDES
+   Desktop defaults live in contact.css. Mobile-down only here.
+   ============================================================ */
+
+/* ---- Tablet / small desktop ---- */
+@media (max-width: 991px) {
+
+    /* Contact split → stack, form first feels natural but keep info first */
+    #contact-section {
+        padding: 72px 0;
+    }
+
+    #contactGrid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .contact-info__heading {
+        font-size: 28px;
+    }
+
+    .contact-info__text {
+        max-width: 100%;
+    }
+
+    /* Map */
+    #map-section {
+        padding-bottom: 72px;
+    }
+
+    .contact-map {
+        height: 360px;
+    }
+
+    #mapDirections {
+        left: 40px;
+    }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 767px) {
+
+    #contact-section {
+        padding: 60px 0;
+    }
+
+    #contactGrid {
+        gap: 36px;
+    }
+
+    .contact-info__heading {
+        font-size: 25px;
+    }
+
+    /* Form card padding trims on small screens */
+    #bookFormCard {
+        padding: 28px 22px;
+    }
+
+    #bookFormTitle {
+        font-size: 24px;
+    }
+
+    /* Channels tighten slightly */
+    #contactChannels {
+        gap: 18px;
+    }
+
+    .contact-channel__icon {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    /* Map directions button becomes full-width under the map */
+    #mapInner {
+        padding: 0 16px;
+    }
+
+    .contact-map {
+        height: 300px;
+    }
+
+    #mapDirections {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        box-shadow: none;
+    }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 575px) {
+
+    #pageHeroHeading {
+        font-size: 28px;
+    }
+
+    .contact-hours__row {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .contact-map {
+        height: 260px;
+        border-radius: 14px;
+    }
+}
+/* ============================================================
+   RESPONSIVE (desktop-first)
+   ============================================================ */
+@media (max-width: 991.98px) {
+    #tst-section {
+        padding: 80px 0;
+    }
+    #tstHeading {
+        font-size: 30px;
+    }
+    .tst-card {
+        padding: 44px 38px 36px;
+    }
+    .tst-card__text {
+        font-size: 17px;
+    }
+}
+ 
+@media (max-width: 767.98px) {
+    #tst-section {
+        padding: 56px 0;
+    }
+    #tstHead {
+        margin-bottom: 36px;
+    }
+    #tstHeading {
+        font-size: 26px;
+    }
+    #tstCarousel {
+        padding: 0 0 56px;
+    }
+    .tst-card {
+        padding: 40px 24px 32px;
+    }
+    .tst-card__quote-icon {
+        top: 22px;
+        right: 24px;
+        font-size: 36px;
+    }
+    .tst-card__text {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+    /* controls sit inside on mobile so they don't overflow */
+    .carousel-control-prev.tst-carousel__control {
+        left: 0;
+    }
+    .carousel-control-next.tst-carousel__control {
+        right: 0;
+    }
+    .tst-carousel__control-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+ 
+@media (max-width: 575.98px) {
+    #tstHeading {
+        font-size: 23px;
+    }
+    .tst-card__person {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tst-card__meta {
+        text-align: center;
+    }
+}
+/* ---- Show on mobile ---- */
+@media (max-width: 767.98px) {
+ 
+    #mobile-cta-bar {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1040;
+        background-color: var(--color-white);
+        border-top: 1px solid #E7ECF2;
+        box-shadow: 0 -6px 20px rgba(27, 36, 48, 0.08);
+        padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px));
+    }
+ 
+    .mobile-cta-bar__item {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 8px 4px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 12px;
+        transition: var(--transition-base);
+    }
+ 
+    .mobile-cta-bar__item i {
+        font-size: 19px;
+        line-height: 1;
+    }
+ 
+    /* Call */
+    .mobile-cta-bar__item--call {
+        color: var(--color-heading-dark);
+    }
+    .mobile-cta-bar__item--call i {
+        color: var(--color-primary-blue);
+    }
+ 
+    /* WhatsApp */
+    .mobile-cta-bar__item--wa {
+        color: var(--color-heading-dark);
+    }
+    .mobile-cta-bar__item--wa i {
+        color: #25D366;
+    }
+ 
+    /* Book — filled accent button */
+    .mobile-cta-bar__item--book {
+        background-color: var(--color-cta-red);
+        color: var(--color-white);
+        margin-left: 4px;
+    }
+    .mobile-cta-bar__item--book i {
+        color: var(--color-white);
+    }
+ 
+    .mobile-cta-bar__item--call:active,
+    .mobile-cta-bar__item--wa:active {
+        background-color: var(--color-bg-light);
+    }
+    .mobile-cta-bar__item--book:active {
+        background-color: var(--color-cta-red-dark);
+    }
+ 
+    /* Give page bottom breathing room so the bar never covers the footer */
+    #site-footer {
+        margin-bottom: 68px;
+    }
+}
+ 

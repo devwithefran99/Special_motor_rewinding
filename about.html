@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Trusted Motor Rewinding &amp; Repair Workshop in Abu Dhabi | Motor Service</title>
+    <meta name="description" content="Learn about Motor Service — a specialist motor rewinding and repair workshop serving small workshops, shops and factories across Abu Dhabi &amp; Mussafah with honest advice and fast turnaround.">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/image/favicon.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS ANIMATION CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- HEADER / NAVBAR START -->
+<!-- COMPONENT: header-navbar -->
+<header id="site-header" class="site-header">
+    <nav id="main-navbar" class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid main-navbar__container">
+
+            <!-- Logo -->
+            <a id="site-logo" class="navbar-brand site-logo" href="index.html" aria-label="Motor Service - Home">
+                <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
+            </a>
+
+            <!-- Mobile Hamburger (opens offcanvas) -->
+            <button id="navbarToggleBtn" class="navbar-toggler navbar-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar" aria-label="Open navigation menu">
+                <span class="navbar-toggle-btn__bar"></span>
+                <span class="navbar-toggle-btn__bar"></span>
+                <span class="navbar-toggle-btn__bar"></span>
+            </button>
+
+            <!-- Desktop Nav (center) -->
+            <div id="navbarCollapse" class="collapse navbar-collapse main-navbar__collapse">
+                <ul id="mainNavList" class="navbar-nav main-nav-list mx-auto">
+                    <li class="nav-item main-nav-list__item">
+                        <a href="index.html" class="nav-link main-nav-list__link" data-nav-link>Home</a>
+                    </li>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="services.html" class="nav-link main-nav-list__link" data-nav-link>Services</a>
+                    </li>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="about.html" class="nav-link main-nav-list__link is-current" data-nav-link>About Us</a>
+                    </li>
+                    <li class="nav-item main-nav-list__item">
+                        <a href="contact.html" class="nav-link main-nav-list__link" data-nav-link>Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Desktop Right Actions -->
+                <div class="navbar-actions">
+                    <a href="tel:+8001234567" class="navbar-actions__phone" aria-label="Call us at (800) 123-4567">
+                        <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
+                        <span class="navbar-actions__phone-number">(800) 123-4567</span>
+                    </a>
+                    <a href="quote.html" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Offcanvas Sidebar (Bootstrap) -->
+<!-- COMPONENT: mobile-sidebar -->
+<div id="mobileSidebar" class="offcanvas offcanvas-start mobile-sidebar" tabindex="-1" aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas-header mobile-sidebar__top">
+        <a href="index.html" class="site-logo site-logo--sidebar" aria-label="Motor Service - Home">
+            <span class="site-logo__text">MOTOR<span class="site-logo__accent">SERVICE</span></span>
+        </a>
+        <button type="button" class="btn-close mobile-sidebar__close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body mobile-sidebar__body">
+        <ul id="mobileNavList" class="navbar-nav mobile-nav-list">
+            <li class="nav-item mobile-nav-list__item">
+                <a href="index.html" class="nav-link mobile-nav-list__link">Home</a>
+            </li>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="services.html" class="nav-link mobile-nav-list__link">Services</a>
+            </li>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="about.html" class="nav-link mobile-nav-list__link is-current">About Us</a>
+            </li>
+            <li class="nav-item mobile-nav-list__item">
+                <a href="contact.html" class="nav-link mobile-nav-list__link">Contact Us</a>
+            </li>
+        </ul>
+
+        <div class="mobile-sidebar__bottom">
+            <a href="tel:+8001234567" class="navbar-actions__phone navbar-actions__phone--sidebar">
+                <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
+                <span class="navbar-actions__phone-number">(800) 123-4567</span>
+            </a>
+            <a href="quote.html" class="navbar-actions__cta navbar-actions__cta--sidebar">Book A Service</a>
+        </div>
+    </div>
+</div>
+<!-- HEADER / NAVBAR END -->
+
+
+<main>
+
+    <!-- PAGE HERO / BREADCRUMB SECTION START -->
+    <!-- COMPONENT: page-hero -->
+    <section id="page-hero" class="page-hero">
+        <span class="page-hero__grid" aria-hidden="true"></span>
+        <span class="page-hero__glow" aria-hidden="true"></span>
+        <div class="container">
+            <div id="pageHeroInner" class="page-hero__inner" data-aos="fade-up">
+                <p id="pageHeroEyebrow" class="page-hero__eyebrow">
+                    <span class="page-hero__eyebrow-line"></span>
+                    Who We Are
+                </p>
+                <h1 id="pageHeroHeading" class="page-hero__heading">
+                    The Workshop Local Businesses <span class="page-hero__heading-accent">Trust Their Motors To</span>
+                </h1>
+                <p id="pageHeroText" class="page-hero__text">
+                    For years we've kept the machines behind Abu Dhabi's small workshops, shops and factories running — with honest advice, quality rewinding, and a fast turnaround you can plan around.
+                </p>
+
+                <!-- COMPONENT: breadcrumb -->
+                <nav id="pageHeroCrumb" class="page-hero__crumb" aria-label="Breadcrumb">
+                    <a href="index.html" class="page-hero__crumb-link">Home</a>
+                    <i class="fa-solid fa-angle-right page-hero__crumb-sep"></i>
+                    <span class="page-hero__crumb-current">About Us</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE HERO / BREADCRUMB SECTION END -->
+
+
+    <!-- OUR STORY SECTION START -->
+    <!-- COMPONENT: about-story -->
+    <section id="story-section" class="story-section">
+        <div class="container">
+            <div id="storyGrid" class="story-grid">
+
+                <!-- Left: image collage -->
+                <div id="storyMedia" class="story-media" data-aos="fade-right">
+                    <div class="story-media__main">
+                        <img src="assets/image/hero-banner-motor-repair.png" alt="Technician rewinding an industrial electric motor in the Motor Service workshop" loading="lazy">
+                    </div>
+                    <div class="story-media__sub">
+                        <img src="assets/image/Chiller_compressor.png" alt="Close-up of a repaired motor stator" loading="lazy">
+                    </div>
+                    <div id="storyBadge" class="story-badge">
+                        <span class="story-badge__num"><span data-count-to="15">0</span>+</span>
+                        <span class="story-badge__label">Years On The Bench</span>
+                    </div>
+                </div>
+
+                <!-- Right: text -->
+                <div id="storyBody" class="story-body" data-aos="fade-left">
+                    <p class="story-body__eyebrow">
+                        <span class="story-body__eyebrow-line"></span>
+                        Our Story
+                    </p>
+                    <h2 class="story-body__heading">
+                        A Repair Shop Built Around <span class="text-accent">One Honest Question</span>
+                    </h2>
+                    <p class="story-body__text">
+                        Motor Service started with a simple idea: when a motor fails, the shop owner deserves a straight answer — repair it, rewind it, or replace it — not an upsell. That honesty is why workshops, water suppliers, and small factories across Mussafah keep coming back.
+                    </p>
+                    <p class="story-body__text">
+                        Today our engineers rewind and repair AC &amp; DC motors, chiller compressors, water pumps, generators, and power tools. Every job leaves the bench tested, balanced, and covered by a workmanship warranty.
+                    </p>
+
+                    <ul id="storyPoints" class="story-points">
+                        <li class="story-points__item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Honest advice — we'll tell you if a repair isn't worth it</span>
+                        </li>
+                        <li class="story-points__item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fast turnaround, most repairs in 1–3 working days</span>
+                        </li>
+                        <li class="story-points__item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Workmanship warranty on every rewinding job</span>
+                        </li>
+                    </ul>
+
+                    <div class="story-body__actions">
+                        <a href="services.html" class="story-body__btn story-body__btn--solid">Our Services</a>
+                        <a href="tel:+971501234567" class="story-body__btn story-body__btn--ghost">
+                            <i class="fa-solid fa-phone"></i> Talk To An Engineer
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- OUR STORY SECTION END -->
+
+
+    <!-- STATS BAND SECTION START -->
+    <!-- COMPONENT: stats-band -->
+    <section id="stats-band" class="stats-band">
+        <span class="stats-band__grid" aria-hidden="true"></span>
+        <div class="container">
+            <div id="statsBandInner" class="stats-band__inner" data-aos="fade-up">
+
+                <div class="stat-item">
+                    <span class="stat-item__num"><span data-count-to="15">0</span>+</span>
+                    <span class="stat-item__label">Years Of Experience</span>
+                </div>
+                <span class="stat-item__divider" aria-hidden="true"></span>
+
+                <div class="stat-item">
+                    <span class="stat-item__num"><span data-count-to="6000">0</span>+</span>
+                    <span class="stat-item__label">Motors Rewound &amp; Repaired</span>
+                </div>
+                <span class="stat-item__divider" aria-hidden="true"></span>
+
+                <div class="stat-item">
+                    <span class="stat-item__num"><span data-count-to="800">0</span>+</span>
+                    <span class="stat-item__label">Workshops Served</span>
+                </div>
+                <span class="stat-item__divider" aria-hidden="true"></span>
+
+                <div class="stat-item">
+                    <span class="stat-item__num"><span data-count-to="98">0</span>%</span>
+                    <span class="stat-item__label">Repeat &amp; Referral Rate</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- STATS BAND SECTION END -->
+
+
+    <!-- HOW WE WORK / VALUES SECTION START -->
+    <!-- COMPONENT: about-values -->
+    <section id="values-section" class="values-section">
+        <div class="container">
+
+            <div id="valuesLayout" class="values-layout">
+
+                <!-- Sticky left heading -->
+                <div id="valuesHead" class="values-head" data-aos="fade-up">
+                    <p class="values-head__eyebrow">
+                        <span class="values-head__eyebrow-line"></span>
+                        What Drives Us
+                    </p>
+                    <h2 class="values-head__heading">
+                        The Way We <span class="text-accent">Do Business</span>
+                    </h2>
+                    <p class="values-head__text">
+                        No jargon, no surprise bills. Just four principles every motor that lands on our bench is handled by.
+                    </p>
+                    <a href="contact.html" class="values-head__btn">
+                        Visit Our Workshop <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Numbered rows (not cards) -->
+                <!-- COMPONENT: value-row (loop) -->
+                <ol id="valuesList" class="values-list" data-aos="fade-up" data-aos-delay="100">
+
+                    <li class="value-row">
+                        <span class="value-row__num">01</span>
+                        <div class="value-row__body">
+                            <h3 class="value-row__title">Honesty Before The Invoice</h3>
+                            <p class="value-row__desc">If replacing is cheaper than repairing, we'll say so. A fair answer today earns a customer for years.</p>
+                        </div>
+                        <span class="value-row__icon"><i class="fa-solid fa-handshake"></i></span>
+                    </li>
+
+                    <li class="value-row">
+                        <span class="value-row__num">02</span>
+                        <div class="value-row__body">
+                            <h3 class="value-row__title">Work That Lasts</h3>
+                            <p class="value-row__desc">Quality insulation, proper bearings, and full load-testing — so the motor doesn't come straight back.</p>
+                        </div>
+                        <span class="value-row__icon"><i class="fa-solid fa-award"></i></span>
+                    </li>
+
+                    <li class="value-row">
+                        <span class="value-row__num">03</span>
+                        <div class="value-row__body">
+                            <h3 class="value-row__title">Respect For Your Downtime</h3>
+                            <p class="value-row__desc">A stopped motor means a stopped business. We give clear timelines and keep to them.</p>
+                        </div>
+                        <span class="value-row__icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                    </li>
+
+                    <li class="value-row">
+                        <span class="value-row__num">04</span>
+                        <div class="value-row__body">
+                            <h3 class="value-row__title">Local &amp; Reachable</h3>
+                            <p class="value-row__desc">Based in Mussafah, a phone call or WhatsApp away — with pickup and delivery across Abu Dhabi.</p>
+                        </div>
+                        <span class="value-row__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    </li>
+
+                </ol>
+
+            </div>
+        </div>
+    </section>
+    <!-- HOW WE WORK / VALUES SECTION END -->
+
+
+    <!-- CTA BANNER SECTION START -->
+    <!-- COMPONENT: cta-banner -->
+    <section id="cta-banner" class="cta-banner">
+        <div id="ctaBannerInner" class="cta-banner__inner">
+            <p id="ctaBannerEyebrow" class="cta-banner__eyebrow">
+                <span class="cta-banner__eyebrow-line"></span>
+                Get Started
+                <span class="cta-banner__eyebrow-line"></span>
+            </p>
+
+            <h2 id="ctaBannerHeading" class="cta-banner__heading">Got A Motor That Needs Looking At?</h2>
+
+            <p id="ctaBannerText" class="cta-banner__text">
+                Send us a photo and a quick description — our engineers will tell you honestly whether to repair, rewind, or replace it.
+            </p>
+
+            <div id="ctaBannerActions" class="cta-banner__actions">
+                <a id="ctaBtnBook" href="quote.html" class="cta-banner__btn">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Book A Service</span>
+                </a>
+                <a id="ctaBtnCall" href="tel:+971501234567" class="cta-banner__btn">
+                    <span>Call +971 50 123 4567</span>
+                </a>
+                <a id="ctaBtnWhatsapp" href="https://wa.me/971501234567" class="cta-banner__btn" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Whatsapp Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CTA BANNER SECTION END -->
+
+</main>
+
+
+<!-- FOOTER SECTION START -->
+<!-- COMPONENT: footer -->
+<footer id="site-footer" class="site-footer">
+    <div class="container">
+
+        <div id="footerRow" class="row footer-row">
+
+            <!-- Brand / About -->
+            <div class="col-lg-4 col-md-6 footer-col">
+                <a id="footerLogo" class="footer-logo" href="index.html" aria-label="Motor Service - Home">
+                    <span class="footer-logo__text">MOTOR<span class="footer-logo__accent">SERVICE</span></span>
+                </a>
+                <p id="footerAbout" class="footer-about">
+                    Professional motor winding, repair, and maintenance solutions for AC/DC motors, pumps, compressors, and industrial equipment across Abu Dhabi &amp; Mussafah.
+                </p>
+                <ul id="footerSocials" class="footer-socials">
+                    <li><a href="#" class="footer-socials__link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#" class="footer-socials__link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 footer-col">
+                <h3 class="footer-col__title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-links__link">Home</a></li>
+                    <li><a href="services.html" class="footer-links__link">Services</a></li>
+                    <li><a href="about.html" class="footer-links__link">About Us</a></li>
+                    <li><a href="contact.html" class="footer-links__link">Contact Us</a></li>
+                    <li><a href="quote.html" class="footer-links__link">Book A Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h3 class="footer-col__title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="service-details.html?service=chiller-compressor-winding" class="footer-links__link">Chiller Compressor Winding</a></li>
+                    <li><a href="service-details.html?service=water-pump-repairing" class="footer-links__link">Water Pump Repairing</a></li>
+                    <li><a href="service-details.html?service=electric-motor-rewinding" class="footer-links__link">Electric Motor Rewinding</a></li>
+                    <li><a href="service-details.html?service=generator-repair" class="footer-links__link">Generator Repair</a></li>
+                    <li><a href="service-details.html?service=ac-dc-motor-rewinding" class="footer-links__link">A/C &amp; DC Motor Rewinding</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h3 class="footer-col__title">Get In Touch</h3>
+                <ul id="footerContact" class="footer-contact">
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>42 Industrial Zone, Mussafah,<br>Abu Dhabi, UAE</span>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+971501234567">+971 50 123 4567</a>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@motorservice.ae">info@motorservice.ae</a>
+                    </li>
+                    <li class="footer-contact__item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Sat – Thu: 8:00 AM – 7:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div id="footerBottom" class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__inner">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Motor Service. All rights reserved.</p>
+                <ul class="footer-bottom__legal">
+                    <li><a href="#" class="footer-bottom__link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-bottom__link">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER SECTION END -->
+
+<!-- BOOTSTRAP + JQUERY + AOS CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

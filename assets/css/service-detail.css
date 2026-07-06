@@ -1,0 +1,509 @@
+/*
+   MOTOR SERVICE — SERVICE DETAIL PAGE STYLES (DESKTOP DEFAULT)
+   Sections unique to individual service pages.
+   Shared tokens (colors, font, eyebrow, cards, CTA, header, footer)
+   come from style.css. Responsive overrides live in responsive.css
+   under the matching id / class selectors.
+*/
+
+/* ============ SERVICE DETAIL — OVERVIEW SECTION ============ */
+#sd-overview {
+    padding: 96px 0;
+    background-color: var(--color-white);
+}
+
+#sd-overview .sd-overview__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+#sdOverviewMedia {
+    position: relative;
+}
+
+#sdOverviewMedia .sd-overview__img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(27, 36, 48, 0.14);
+}
+
+#sdOverviewMedia .sd-overview__badge {
+    position: absolute;
+    left: -24px;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 26px;
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    border-radius: 14px;
+    box-shadow: 0 16px 34px rgba(30, 136, 245, 0.34);
+}
+
+#sdOverviewMedia .sd-overview__badge-icon {
+    font-size: 30px;
+    line-height: 1;
+}
+
+#sdOverviewMedia .sd-overview__badge-num {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    display: block;
+}
+
+#sdOverviewMedia .sd-overview__badge-label {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.92;
+}
+
+#sdOverviewBody .sd-overview__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-primary-blue);
+    margin-bottom: 18px;
+}
+
+#sdOverviewBody .sd-overview__eyebrow-line {
+    width: 42px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+#sdOverviewBody .sd-overview__heading {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: 22px;
+}
+
+#sdOverviewBody .sd-overview__heading-accent {
+    color: var(--color-primary-blue);
+}
+
+#sdOverviewBody .sd-overview__text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text-gray);
+    margin-bottom: 18px;
+}
+
+#sdOverviewBody .sd-overview__text:last-of-type {
+    margin-bottom: 30px;
+}
+
+#sdOverviewBody .sd-overview__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#sdOverviewBody .sd-overview__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: var(--transition-base);
+}
+
+#sdOverviewBody .sd-overview__btn--primary {
+    background-color: var(--color-cta-red);
+    color: var(--color-white);
+}
+
+#sdOverviewBody .sd-overview__btn--primary:hover {
+    background-color: var(--color-cta-red-dark);
+    transform: translateY(-2px);
+}
+
+#sdOverviewBody .sd-overview__btn--ghost {
+    background-color: transparent;
+    color: var(--color-heading-dark);
+    border: 2px solid #E2E7EE;
+}
+
+#sdOverviewBody .sd-overview__btn--ghost:hover {
+    border-color: var(--color-primary-blue);
+    color: var(--color-primary-blue);
+}
+
+/* ============ SERVICE DETAIL — FEATURES / WHAT'S INCLUDED ============ */
+#sd-features {
+    padding: 96px 0;
+    background-color: var(--color-bg-light);
+}
+
+#sdFeaturesHead {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+}
+
+#sdFeaturesHead .sd-features__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-primary-blue);
+    margin-bottom: 16px;
+}
+
+#sdFeaturesHead .sd-features__eyebrow-line {
+    width: 34px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+#sdFeaturesHead .sd-features__heading {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-heading-dark);
+}
+
+#sdFeaturesHead .sd-features__heading-accent {
+    color: var(--color-primary-blue);
+}
+
+#sdFeaturesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.sd-feature {
+    background-color: var(--color-white);
+    border: 1px solid #E7ECF2;
+    border-radius: 16px;
+    padding: 34px 28px;
+    transition: var(--transition-base);
+}
+
+.sd-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(27, 36, 48, 0.1);
+    border-color: transparent;
+}
+
+.sd-feature__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background-color: rgba(30, 136, 245, 0.1);
+    color: var(--color-primary-blue);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sd-feature__title {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--color-heading-dark);
+    margin-bottom: 12px;
+}
+
+.sd-feature__desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-gray);
+}
+
+/* ============ SERVICE DETAIL — FAQ SECTION ============ */
+#sd-faq {
+    padding: 96px 0;
+    background-color: var(--color-white);
+}
+
+#sdFaqHead {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+}
+
+#sdFaqHead .sd-faq__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-primary-blue);
+    margin-bottom: 16px;
+}
+
+#sdFaqHead .sd-faq__eyebrow-line {
+    width: 34px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+#sdFaqHead .sd-faq__heading {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-heading-dark);
+}
+
+#sdFaqHead .sd-faq__heading-accent {
+    color: var(--color-primary-blue);
+}
+
+#sdFaqList {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* COMPONENT: faq-accordion-item */
+.sd-faq-item {
+    border: 1px solid #E7ECF2;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: var(--transition-base);
+}
+
+.sd-faq-item.is-open {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 12px 30px rgba(30, 136, 245, 0.1);
+}
+
+.sd-faq-item__q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 28px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-heading-dark);
+    transition: var(--transition-base);
+}
+
+.sd-faq-item__q:hover {
+    color: var(--color-primary-blue);
+}
+
+.sd-faq-item__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(30, 136, 245, 0.1);
+    color: var(--color-primary-blue);
+    font-size: 14px;
+    transition: var(--transition-base);
+}
+
+.sd-faq-item.is-open .sd-faq-item__icon {
+    transform: rotate(45deg);
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+}
+
+.sd-faq-item__a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sd-faq-item__a-inner {
+    padding: 0 28px 24px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text-gray);
+}
+
+
+/* ============================================================
+   RESPONSIVE OVERRIDES (desktop-first)
+   Base styles above are desktop. Below scales down for
+   tablet & mobile. Matches Bootstrap 5 breakpoints:
+   lg <992px, md <768px, sm <576px
+   ============================================================ */
+
+/* ---------- TABLET & BELOW (< 992px) ---------- */
+@media (max-width: 991.98px) {
+
+    /* Overview: stack image over text */
+    #sd-overview {
+        padding: 72px 0;
+    }
+    #sd-overview .sd-overview__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    #sdOverviewMedia .sd-overview__img {
+        height: 400px;
+    }
+    #sdOverviewBody .sd-overview__heading {
+        font-size: 32px;
+    }
+
+    /* Features: 2 columns */
+    #sd-features {
+        padding: 72px 0;
+    }
+    #sdFeaturesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #sdFeaturesHead .sd-features__heading {
+        font-size: 30px;
+    }
+
+    /* FAQ */
+    #sd-faq {
+        padding: 72px 0;
+    }
+    #sdFaqHead .sd-faq__heading {
+        font-size: 30px;
+    }
+}
+
+/* ---------- MOBILE (< 768px) ---------- */
+@media (max-width: 767.98px) {
+
+    /* Overview */
+    #sd-overview {
+        padding: 56px 0;
+    }
+    #sdOverviewMedia .sd-overview__img {
+        height: 320px;
+    }
+    #sdOverviewMedia .sd-overview__badge {
+        left: 16px;
+        bottom: 16px;
+        padding: 14px 20px;
+    }
+    #sdOverviewMedia .sd-overview__badge-icon {
+        font-size: 26px;
+    }
+    #sdOverviewMedia .sd-overview__badge-num {
+        font-size: 22px;
+    }
+    #sdOverviewBody .sd-overview__heading {
+        font-size: 27px;
+    }
+    #sdOverviewBody .sd-overview__text {
+        font-size: 15px;
+    }
+    #sdOverviewBody .sd-overview__actions {
+        flex-direction: column;
+    }
+    #sdOverviewBody .sd-overview__btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Features: 1 column */
+    #sd-features {
+        padding: 56px 0;
+    }
+    #sdFeaturesHead {
+        margin-bottom: 40px;
+    }
+    #sdFeaturesHead .sd-features__heading {
+        font-size: 26px;
+    }
+    #sdFeaturesGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .sd-feature {
+        padding: 28px 24px;
+    }
+
+    /* FAQ */
+    #sd-faq {
+        padding: 56px 0;
+    }
+    #sdFaqHead {
+        margin-bottom: 36px;
+    }
+    #sdFaqHead .sd-faq__heading {
+        font-size: 26px;
+    }
+    .sd-faq-item__q {
+        padding: 20px 22px;
+        font-size: 15.5px;
+    }
+    .sd-faq-item__a-inner {
+        padding: 0 22px 20px;
+        font-size: 14.5px;
+    }
+}
+
+/* ---------- SMALL MOBILE (< 576px) ---------- */
+@media (max-width: 575.98px) {
+
+    #sdOverviewMedia .sd-overview__img {
+        height: 260px;
+    }
+    #sdOverviewBody .sd-overview__heading {
+        font-size: 24px;
+    }
+    #sdFeaturesHead .sd-features__heading,
+    #sdFaqHead .sd-faq__heading {
+        font-size: 23px;
+    }
+    .sd-faq-item__q {
+        gap: 14px;
+        font-size: 15px;
+    }
+}
+
+
+/* ============================================================
+   OVERFLOW FIX — stop horizontal scroll / right-side gap
+   ============================================================ */
+
+/* Safety net: never let the page scroll sideways */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Bootstrap .row inside a custom .container adds negative
+   side margins that push past the viewport. Neutralise it
+   on the footer row. */
+#site-footer .footer-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* The overview badge sits slightly outside the image with a
+   negative offset; keep the section from leaking that overflow. */
+#sd-overview {
+    overflow: hidden;
+}

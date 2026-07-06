@@ -1,0 +1,531 @@
+/* ============================================================
+   MOTOR SERVICE — ABOUT PAGE STYLESHEET (DESKTOP DEFAULT)
+   Desktop-first. Reuses homepage tokens from style.css.
+   page-hero + cta-banner are shared; styled in services.css /
+   style.css respectively. This file adds only About-only sections.
+   Responsive overrides live in responsive.css
+   ============================================================ */
+
+/* Active nav link state (About current page) */
+.main-nav-list__link.is-current {
+    color: var(--color-primary-blue);
+}
+
+.mobile-nav-list__link.is-current {
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+}
+
+/* Shared accent used by section headings on this page */
+.text-accent {
+    color: var(--color-primary-blue);
+}
+
+
+/* ============================================================
+   PAGE HERO (About reuses the Services hero look)
+   Kept here so about.css alone renders the dark hero correctly.
+   Unique elements via #id per convention.
+   ============================================================ */
+#page-hero {
+    position: relative;
+    padding: 78px 0 70px;
+    background-color: var(--color-heading-dark);
+    overflow: hidden;
+}
+
+.page-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    z-index: 0;
+}
+
+.page-hero__glow {
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30, 136, 245, 0.32) 0%, rgba(30, 136, 245, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.page-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+#pageHeroEyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    margin-bottom: 16px;
+}
+
+.page-hero__eyebrow-line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+#pageHeroHeading {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--color-white);
+    margin: 0 0 18px;
+}
+
+.page-hero__heading-accent {
+    color: var(--color-primary-blue);
+}
+
+#pageHeroText {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 600px;
+    margin: 0 0 26px;
+}
+
+.page-hero__crumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.page-hero__crumb-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color var(--transition-base);
+}
+
+.page-hero__crumb-link:hover {
+    color: var(--color-primary-blue);
+}
+
+.page-hero__crumb-sep {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.page-hero__crumb-current {
+    color: var(--color-primary-blue);
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   OUR STORY  —  image collage + text (no cards)
+   Unique wrappers via #id; nothing repeats here.
+   ============================================================ */
+#story-section {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+#storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* ---- Left: layered image collage ---- */
+#storyMedia {
+    position: relative;
+    padding-bottom: 40px;
+    padding-right: 40px;
+}
+
+.story-media__main {
+    position: relative;
+    z-index: 1;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(20, 30, 45, 0.16);
+}
+
+.story-media__main img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Smaller overlapping image, bottom-right */
+.story-media__sub {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 46%;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 5px solid var(--color-white);
+    box-shadow: 0 18px 40px rgba(20, 30, 45, 0.18);
+}
+
+.story-media__sub img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Floating experience badge, top-left */
+#storyBadge {
+    position: absolute;
+    top: 22px;
+    left: -18px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 18px 22px;
+    border-radius: 14px;
+    background-color: var(--color-primary-blue);
+    box-shadow: 0 16px 34px rgba(30, 136, 245, 0.4);
+}
+
+.story-badge__num {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-white);
+}
+
+.story-badge__label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 110px;
+}
+
+/* ---- Right: story text ---- */
+.story-body__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    margin-bottom: 14px;
+}
+
+.story-body__eyebrow-line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+.story-body__heading {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-heading-dark);
+    margin: 0 0 20px;
+}
+
+.story-body__text {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--color-text-gray);
+    margin: 0 0 16px;
+}
+
+/* Check-list (repeating item = class) */
+#storyPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.story-points__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-heading-dark);
+}
+
+.story-points__item i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    font-size: 16px;
+    color: var(--color-primary-blue);
+}
+
+.story-body__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* Two buttons share a look; ids not needed (kept class-based, small set) */
+.story-body__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+}
+
+.story-body__btn--solid {
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    border: 1.5px solid var(--color-primary-blue);
+}
+
+.story-body__btn--solid:hover {
+    background-color: var(--color-primary-blue-dark);
+    border-color: var(--color-primary-blue-dark);
+    transform: translateY(-2px);
+}
+
+.story-body__btn--ghost {
+    background-color: transparent;
+    color: var(--color-heading-dark);
+    border: 1.5px solid #E1E6EC;
+}
+
+.story-body__btn--ghost:hover {
+    border-color: var(--color-primary-blue);
+    color: var(--color-primary-blue);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   STATS BAND  —  dark counter strip (moved from Services)
+   Unique wrapper via #id; repeating .stat-item stays class-based.
+   ============================================================ */
+#stats-band {
+    position: relative;
+    padding: 66px 0;
+    background-color: var(--color-heading-dark);
+    overflow: hidden;
+}
+
+.stats-band__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    z-index: 0;
+}
+
+#statsBandInner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-item__num {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.stat-item__num span {
+    color: var(--color-primary-blue);
+}
+
+.stat-item__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-item__divider {
+    width: 1px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   VALUES  —  sticky heading + numbered rows (no cards)
+   Unique wrappers via #id; repeating .value-row stays class-based.
+   ============================================================ */
+#values-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-light);
+}
+
+#valuesLayout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* Left column sticks while rows scroll */
+#valuesHead {
+    position: sticky;
+    top: 120px;
+}
+
+.values-head__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    margin-bottom: 14px;
+}
+
+.values-head__eyebrow-line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary-blue);
+}
+
+.values-head__heading {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-heading-dark);
+    margin: 0 0 16px;
+}
+
+.values-head__text {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--color-text-gray);
+    margin: 0 0 28px;
+    max-width: 340px;
+}
+
+.values-head__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    transition: gap var(--transition-base), color var(--transition-base);
+}
+
+.values-head__btn:hover {
+    gap: 16px;
+    color: var(--color-primary-blue-dark);
+}
+
+/* Numbered rows */
+#valuesList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: none;
+}
+
+.value-row {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px 0;
+    border-bottom: 1px solid #E3E8EE;
+    transition: transform var(--transition-base);
+}
+
+.value-row:first-child {
+    padding-top: 0;
+}
+
+.value-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.value-row:hover {
+    transform: translateX(6px);
+}
+
+.value-row__num {
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-primary-blue);
+    opacity: 0.55;
+    min-width: 40px;
+}
+
+.value-row__body {
+    flex: 1;
+}
+
+.value-row__title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--color-heading-dark);
+    margin: 0 0 8px;
+}
+
+.value-row__desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-gray);
+    margin: 0;
+}
+
+.value-row__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    font-size: 20px;
+    color: var(--color-primary-blue);
+    background-color: rgba(30, 136, 245, 0.1);
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.value-row:hover .value-row__icon {
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+}

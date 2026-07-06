@@ -1,0 +1,190 @@
+/*
+   MOTOR SERVICE — LEGAL PAGES (Privacy Policy, Terms & Conditions)
+   Shared by both legal pages. Uses tokens from style.css.
+   Desktop-first; responsive at the bottom.
+   Link after style.css on the legal pages.
+*/
+
+/* ============ LEGAL CONTENT SECTION ============ */
+#legal-section {
+    padding: 88px 0 96px;
+    background-color: var(--color-white);
+}
+
+#legalInner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* Last-updated line under the hero */
+#legalMeta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary-blue);
+    background-color: rgba(30, 136, 245, 0.08);
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+#legalMeta i {
+    font-size: 13px;
+}
+
+/* Intro paragraph */
+.legal-intro {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--color-text-gray);
+    margin-bottom: 40px;
+}
+
+/* ---- Blocks ---- */
+/* COMPONENT: legal-block (loop) */
+.legal-block {
+    margin-bottom: 38px;
+}
+
+.legal-block:last-child {
+    margin-bottom: 0;
+}
+
+.legal-block__title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-heading-dark);
+    margin-bottom: 16px;
+}
+
+.legal-block__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.legal-block__text {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--color-text-gray);
+    margin-bottom: 16px;
+}
+
+.legal-block__text:last-child {
+    margin-bottom: 0;
+}
+
+/* Bulleted list inside a block */
+.legal-list {
+    margin: 4px 0 16px;
+    padding-left: 4px;
+}
+
+.legal-list__item {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-text-gray);
+    margin-bottom: 12px;
+}
+
+.legal-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.legal-list__item i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--color-primary-blue);
+    font-size: 14px;
+}
+
+/* Contact callout at the end */
+#legalContact {
+    margin-top: 48px;
+    padding: 32px 34px;
+    background-color: var(--color-bg-light);
+    border-radius: 16px;
+    border: 1px solid #E7ECF2;
+}
+
+#legalContact .legal-contact__title {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--color-heading-dark);
+    margin-bottom: 10px;
+}
+
+#legalContact .legal-contact__text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-text-gray);
+    margin-bottom: 18px;
+}
+
+#legalContact .legal-contact__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 30px;
+}
+
+#legalContact .legal-contact__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--color-heading-dark);
+    font-weight: 500;
+}
+
+#legalContact .legal-contact__item i {
+    color: var(--color-primary-blue);
+    font-size: 15px;
+}
+
+/* ============================================================
+   RESPONSIVE (desktop-first)
+   ============================================================ */
+@media (max-width: 767.98px) {
+    #legal-section {
+        padding: 60px 0 64px;
+    }
+    .legal-intro {
+        font-size: 16px;
+    }
+    .legal-block__title {
+        font-size: 19px;
+        gap: 11px;
+    }
+    .legal-block__num {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .legal-block__text,
+    .legal-list__item {
+        font-size: 15px;
+    }
+    #legalContact {
+        padding: 26px 22px;
+    }
+    #legalContact .legal-contact__list {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
