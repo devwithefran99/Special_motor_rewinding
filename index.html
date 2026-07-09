@@ -67,11 +67,11 @@
 
                 <!-- Desktop Right Actions -->
                 <div class="navbar-actions">
-                    <a href="tel:+8001234567" class="navbar-actions__phone" aria-label="Call us at (800) 123-4567">
+                    <a href="tel:+8001234567" class="navbar-actions__phone" aria-label="Call us at +971 50 223 1278">
                         <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
-                        <span class="navbar-actions__phone-number">(800) 123-4567</span>
+                        <span class="navbar-actions__phone-number">+971 50 223 1278</span>
                     </a>
-                    <a href="quote.html" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
+                    <a href="#book-section" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
                 </div>
             </div>
         </div>
@@ -126,9 +126,9 @@
         <div class="mobile-sidebar__bottom">
             <a href="tel:+8001234567" class="navbar-actions__phone navbar-actions__phone--sidebar">
                 <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
-                <span class="navbar-actions__phone-number">(800) 123-4567</span>
+                <span class="navbar-actions__phone-number">+971 50 223 1278</span>
             </a>
-            <a href="quote.html" class="navbar-actions__cta navbar-actions__cta--sidebar">Book A Service</a>
+            <a href="#book-section" class="navbar-actions__cta navbar-actions__cta--sidebar">Book A Service</a>
         </div>
     </div>
 </div>
@@ -237,48 +237,40 @@
             <div id="processGrid" class="row process-grid align-items-center">
  
                 <!--  PROCESS GALLERY (LEFT)  -->
-                <div class="col-lg-6">
-                    <div id="processGallery" class="process-gallery" data-aos="fade-right">
- 
-                        <!-- Decorative blueprint accents -->
-                        <span id="processGalleryCornerTL" class="process-gallery__corner" aria-hidden="true"></span>
-                        <span id="processGalleryCornerBR" class="process-gallery__corner" aria-hidden="true"></span>
-                        <span id="processGalleryDividerV" class="process-gallery__dash-v" aria-hidden="true"></span>
- 
-                        <!-- Large left image — replace src with the real photo -->
-                        <div id="processGalleryMain" class="process-gallery__frame">
-                            <img id="processImgMain" src="assets/image/ring.png" alt="Technician repairing an electric motor rotor" loading="lazy">
-                        </div>
- 
-                        <!-- Top-right image — replace src with the real photo -->
-                        <div id="processGalleryTop" class="process-gallery__frame">
-                            <img id="processImgTop" src="assets/image/gear.png" alt="Close-up of copper motor winding coils" loading="lazy">
-                        </div>
- 
-                        <!-- Bottom-right image — replace src with the real photo -->
-                        <div id="processGalleryBottom" class="process-gallery__frame">
-                            <img id="processImgBottom" src="assets/image/technician.png" alt="Motor repair technician portrait" loading="lazy">
-                        </div>
- 
-                        <!-- COMPONENT: stats-counter-card -->
-                        <div id="processStatsCard" class="process-stats-card">
-                            <div class="process-stats-card__item">
-                                <span class="process-stats-card__number">
-                                    <span class="process-stats-card__count" data-count-to="15">0</span>+
-                                </span>
-                                <span class="process-stats-card__label">Years Experience</span>
-                            </div>
-                            <span class="process-stats-card__divider" aria-hidden="true"></span>
-                            <div class="process-stats-card__item">
-                                <span class="process-stats-card__number">
-                                    <span class="process-stats-card__count" data-count-to="5000">0</span>+
-                                </span>
-                                <span class="process-stats-card__label">Motors Serviced</span>
-                            </div>
-                        </div>
- 
-                    </div>
-                </div>
+                <!--  PROCESS GALLERY (LEFT)  -->
+<div class="col-lg-6">
+    <div id="processGallery" class="process-gallery" data-aos="fade-right">
+
+        <!-- Decorative blueprint accents -->
+        <span id="processGalleryCornerTL" class="process-gallery__corner" aria-hidden="true"></span>
+        <span id="processGalleryCornerBR" class="process-gallery__corner" aria-hidden="true"></span>
+        <span id="processGalleryDividerV" class="process-gallery__dash-v" aria-hidden="true"></span>
+
+        <img id="processImgMain" class="process-gallery__img" src="assets/image/ring.png" alt="Technician repairing an electric motor rotor" loading="lazy">
+
+        <img id="processImgTop" class="process-gallery__img" src="assets/image/gear.png" alt="Close-up of copper motor winding coils" loading="lazy">
+
+        <img id="processImgBottom" class="process-gallery__img" src="assets/image/technician.png" alt="Motor repair technician portrait" loading="lazy">
+
+        <!-- COMPONENT: stats-counter-card -->
+        <div id="processStatsCard" class="process-stats-card">
+            <div class="process-stats-card__item">
+                <span class="process-stats-card__number">
+                    <span class="process-stats-card__count" data-count-to="15">0</span>+
+                </span>
+                <span class="process-stats-card__label">Years Experience</span>
+            </div>
+            <span class="process-stats-card__divider" aria-hidden="true"></span>
+            <div class="process-stats-card__item">
+                <span class="process-stats-card__number">
+                    <span class="process-stats-card__count" data-count-to="5000">0</span>+
+                </span>
+                <span class="process-stats-card__label">Motors Serviced</span>
+            </div>
+        </div>
+
+    </div>
+</div>
  
                 <!--  PROCESS CONTENT (RIGHT)  -->
                 <div class="col-lg-6">
@@ -316,7 +308,7 @@
                                     <p class="process-step__desc">Advanced testing to identify electrical and mechanical issues.</p>
                                 </div>
                             </li>
-                            <li class="process-step is-active">
+                            <li class="process-step">
                                 <span class="process-step__icon"><i class="fa-solid fa-wrench"></i></span>
                                 <div class="process-step__body">
                                     <div class="process-step__heading-row">
@@ -339,13 +331,13 @@
                         </ul>
  
                         <div id="processCtaRow" class="process-cta-row">
-                            <a id="processBookBtn" href="quote.html" class="process-cta-row__btn">
+                            <a id="processBookBtn" href="#book-section" class="process-cta-row__btn">
                                 Book A Service <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a id="processPhoneLink" href="tel:+971500000000" class="process-cta-row__phone">
+                            <a id="processPhoneLink" href="tel:+971 50 223 1278" class="process-cta-row__phone">
                                 <span class="process-cta-row__phone-icon"><i class="fa-solid fa-phone"></i></span>
                                 <span class="process-cta-row__phone-text">
-                                    <strong>+971 50 000 0000</strong>
+                                    <strong>+971 50 223 1278</strong>
                                     <small>Call Our Experts</small>
                                 </span>
                             </a>
@@ -362,15 +354,16 @@
     <!--  SERVICES SECTION START  -->
 <section id="services-section">
     <div class="services-inner">
-        <div class="services-heading">
-            <div class="services-eyebrow">
-                <span class="eyebrow-line"></span>
-                <span>Our Services</span>
-                <span class="eyebrow-line right"></span>
-            </div>
-            <h2 class="services-title">A Comprehensive <span class="text-accent">Set<br>Of Services</span></h2>
-            <p class="services-subtitle">Special Motor Winding provides expert rewinding, repair, and maintenance services for industrial motors, compressors, and equipment across Abu Dhabi, UAE.</p>
-        </div>
+        <!-- COMPONENT: services-head -->
+<div id="servicesHead">
+    <div id="servicesEyebrow">
+        <span class="services-head__eyebrow-line"></span>
+        <span>Our Services</span>
+        <span class="services-head__eyebrow-line"></span>
+    </div>
+    <h2 id="servicesHeading">A Comprehensive <span class="services-head__heading-accent">Set Of Services</span></h2>
+    <p id="servicesSubtitle">Special Motor Winding provides expert rewinding, repair, and maintenance services for industrial motors, compressors, and equipment across Abu Dhabi, UAE.</p>
+</div>
 
         <div id="services-grid">
 
@@ -467,7 +460,7 @@
         </p>
 
         <div id="ctaBannerActions" class="cta-banner__actions">
-            <a id="ctaBtnBook" href="quote.html" class="cta-banner__btn">
+            <a id="ctaBtnBook" href="#book-section" class="cta-banner__btn">
                 <i class="fa-solid fa-calendar-check"></i>
                 <span>Book A Service</span>
             </a>
@@ -584,7 +577,7 @@
                         <strong class="faq-cta-bar__title">Still Have Doubts?</strong>
                         <span class="faq-cta-bar__subtitle">Talk to our motor service experts — we're happy to help.</span>
                     </div>
-                    <a id="faqCtaBtn" href="quote.html" class="faq-cta-bar__btn">Get A Quote</a>
+                    <a id="faqCtaBtn" href="#book-section" class="faq-cta-bar__btn">Get A Quote</a>
                 </div>
 
             </div>
@@ -722,7 +715,7 @@
                             <span class="book-info-item__icon"><i class="fa-solid fa-phone"></i></span>
                             <div class="book-info-item__body">
                                 <span class="book-info-item__label">Phone Number</span>
-                                <a href="tel:+8801712345678" class="book-info-item__value">+880 1712-345678</a>
+                                <a href="tel:+971501234567" class="book-info-item__value">+971 50 123 4567</a>
                             </div>
                         </li>
                         <li class="book-info-item">
@@ -743,7 +736,7 @@
                             <span class="book-info-item__icon"><i class="fa-solid fa-location-dot"></i></span>
                             <div class="book-info-item__body">
                                 <span class="book-info-item__label">Our Workshop</span>
-                                <span class="book-info-item__value">42 Industrial Zone, Nasirabad, Chattogram</span>
+                                <span class="book-info-item__value">Musaffah - M13 - Abu Dhabi - United Arab Emirates</span>
                             </div>
                         </li>
                     </ul>
@@ -803,9 +796,6 @@
 
 
 <!--  TESTIMONIALS SECTION START  -->
-<!-- COMPONENT: testimonials-marquee -->
-<!-- PLACEMENT: paste in index.html between BOOK SERVICE SECTION END and FOOTER SECTION START -->
-<!-- NOTE: the track is duplicated once in JS for a seamless loop — only write each real card ONCE below. -->
 <section id="tst-section" class="tst-section">
     <div class="container">
 
@@ -957,7 +947,7 @@
                     <li><a href="services.html" class="footer-links__link">Services</a></li>
                     <li><a href="about.html" class="footer-links__link">About Us</a></li>
                     <li><a href="contact.html" class="footer-links__link">Contact Us</a></li>
-                    <li><a href="quote.html" class="footer-links__link">Book A Service</a></li>
+                    <li><a href="#book-section" class="footer-links__link">Book A Service</a></li>
                 </ul>
             </div>
 

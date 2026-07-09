@@ -99,20 +99,26 @@
     }
 
     #processGallery {
-        height: 440px;
-        max-width: 480px;
-        margin: 0 auto;
+        height: 500px;
+        max-width: 500px;
+        margin: 0 auto 40px;
     }
-
-    #processStatsCard {
-        left: 6%;
-        bottom: -28px;
-        width: 200px;
-        padding: 18px 16px;
+     #processStatsCard {
+        left: 28%;
+        bottom: -26px;
+        width: 175px;
+        padding: 22px 16px;
     }
 
     .process-stats-card__number {
-        font-size: 22px;
+        font-size: 26px;
+    }
+     #servicesHeading {
+        font-size: 30px;
+    }
+    #servicesSubtitle {
+        font-size: 14px;
+        max-width: 560px;
     }
 
     /* Services grid → 2 columns on tablet */
@@ -209,7 +215,7 @@
     .footer-col {
         margin-bottom: 32px;
     }
-}
+
 
 
 /*  MOBILE (<= 767px)  */
@@ -265,11 +271,10 @@
         padding: 60px 0;
     }
 
-    #processGallery {
-        height: 340px;
-        max-width: 380px;
+  #processGallery {
+        height: 420px;
+        max-width: 420px;
     }
-
     #processGalleryDividerV,
     .process-gallery__corner {
         display: none;
@@ -278,8 +283,10 @@
     #processStatsCard {
         left: 50%;
         transform: translateX(-50%);
-        bottom: -24px;
-        width: 220px;
+        bottom: -22px;
+        width: 160px;
+        padding: 18px 14px;
+        gap: 12px;
     }
 
     #processHeading {
@@ -418,6 +425,24 @@
     #areaMapBox {
         min-height: 300px;
     }
+    #servicesHead {
+        margin-bottom: 32px;
+    }
+    #servicesEyebrow {
+        gap: 10px;
+        font-size: 14px;
+    }
+    #servicesEyebrow .services-head__eyebrow-line {
+        width: 28px;
+    }
+    #servicesHeading {
+        font-size: 26px;
+    }
+    #servicesSubtitle {
+        font-size: 13.5px;
+        line-height: 1.65;
+        margin-top: 10px;
+    }
 
     /* Book service */
     #book-section {
@@ -541,13 +566,14 @@
     }
 
     #processGallery {
-        height: 280px;
-        max-width: 300px;
+        height: 340px;
+        max-width: 100%;
     }
 
-    #processStatsCard {
-        width: 190px;
-        padding: 16px 14px;
+     #processStatsCard {
+        bottom: -18px;
+        width: 140px;
+        padding: 14px 12px;
         gap: 10px;
     }
 
@@ -578,10 +604,17 @@
         grid-template-columns: 1fr;
     }
 
-    #services-section .services-title {
-        font-size: 1.8rem;
+   #servicesEyebrow .services-head__eyebrow-line {
+        width: 20px;
     }
-
+    #servicesHeading {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+    #servicesSubtitle {
+        font-size: 13px;
+        padding: 0 6px;
+    }
     /* CTA banner */
     #ctaBannerInner {
         padding: 28px 10px;
@@ -1180,8 +1213,17 @@
     }
 }
 /* ============================================================
-   RESPONSIVE (desktop-first)
+   TESTIMONIALS — RESPONSIVE (desktop-first)
    ============================================================ */
+
+/* 3 visible */
+@media (max-width: 1199.98px) {
+    .tst-card {
+        width: calc((100vw - 48px - 48px) / 3);
+    }
+}
+
+/* 2 visible */
 @media (max-width: 991.98px) {
     #tst-section {
         padding: 80px 0;
@@ -1190,13 +1232,15 @@
         font-size: 30px;
     }
     .tst-card {
-        padding: 44px 38px 36px;
+        width: calc((100vw - 48px - 24px) / 2);
+        padding: 30px 26px 26px;
     }
     .tst-card__text {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
- 
+
+/* 1 visible */
 @media (max-width: 767.98px) {
     #tst-section {
         padding: 56px 0;
@@ -1207,45 +1251,41 @@
     #tstHeading {
         font-size: 26px;
     }
-    #tstCarousel {
-        padding: 0 0 56px;
+    #tstMarquee {
+        -webkit-mask-image: none;
+        mask-image: none;
     }
     .tst-card {
-        padding: 40px 24px 32px;
-    }
-    .tst-card__quote-icon {
-        top: 22px;
-        right: 24px;
-        font-size: 36px;
+        width: calc(100vw - 72px);
+        max-width: none;
+        margin-right: 16px;
+        padding: 28px 22px 24px;
     }
     .tst-card__text {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.75;
     }
-    /* controls sit inside on mobile so they don't overflow */
-    .carousel-control-prev.tst-carousel__control {
-        left: 0;
-    }
-    .carousel-control-next.tst-carousel__control {
-        right: 0;
-    }
-    .tst-carousel__control-icon {
+    .tst-marquee__arrow {
         width: 40px;
         height: 40px;
-        font-size: 16px;
+        font-size: 15px;
+    }
+    .tst-marquee__arrow--prev {
+        left: 8px;
+    }
+    .tst-marquee__arrow--next {
+        right: 8px;
     }
 }
- 
+
 @media (max-width: 575.98px) {
     #tstHeading {
         font-size: 23px;
     }
-    .tst-card__person {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .tst-card__meta {
-        text-align: center;
+    .tst-card__avatar {
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
     }
 }
 /* ---- Show on mobile ---- */
@@ -1298,16 +1338,16 @@
     .mobile-cta-bar__item--wa i {
         color: #25D366;
     }
+     .mobile-cta-bar__item--book i {
+        color: var(--color-primary-blue);
+     }
  
     /* Book — filled accent button */
     .mobile-cta-bar__item--book {
-        background-color: var(--color-cta-red);
-        color: var(--color-white);
         margin-left: 4px;
+        color: var(--color-heading-dark);
     }
-    .mobile-cta-bar__item--book i {
-        color: var(--color-white);
-    }
+   
  
     .mobile-cta-bar__item--call:active,
     .mobile-cta-bar__item--wa:active {
@@ -1322,4 +1362,4 @@
         margin-bottom: 68px;
     }
 }
- 
+} 
