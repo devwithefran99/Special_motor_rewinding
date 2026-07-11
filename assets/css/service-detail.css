@@ -1,10 +1,7 @@
-/*
-   MOTOR SERVICE — SERVICE DETAIL PAGE STYLES (DESKTOP DEFAULT)
-   Sections unique to individual service pages.
-   Shared tokens (colors, font, eyebrow, cards, CTA, header, footer)
-   come from style.css. Responsive overrides live in responsive.css
-   under the matching id / class selectors.
-*/
+:root{
+     --font-primary: 'Poppins', sans-serif;
+    --secondary-font: 'syne' , sans-serif;
+}
 
 /* ============ SERVICE DETAIL — OVERVIEW SECTION ============ */
 #sd-overview {
@@ -87,6 +84,7 @@
     line-height: 1.2;
     color: var(--color-heading-dark);
     margin-bottom: 22px;
+    font-family: var(--secondary-font);
 }
 
 #sdOverviewBody .sd-overview__heading-accent {
@@ -177,6 +175,7 @@
     font-weight: 700;
     line-height: 1.25;
     color: var(--color-heading-dark);
+    font-family: var(--secondary-font);
 }
 
 #sdFeaturesHead .sd-features__heading-accent {
@@ -264,6 +263,7 @@
     font-weight: 700;
     line-height: 1.25;
     color: var(--color-heading-dark);
+    font-family: var(--secondary-font);
 }
 
 #sdFaqHead .sd-faq__heading-accent {

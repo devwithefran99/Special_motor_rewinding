@@ -1,8 +1,7 @@
-/* ============================================================
-   MOTOR SERVICE — SERVICES PAGE STYLESHEET (DESKTOP DEFAULT)
-   Desktop-first. Reuses homepage tokens from style.css.
-   Responsive overrides live in services-responsive.css
-   ============================================================ */
+:root{
+     --font-primary: 'Poppins', sans-serif;
+    --secondary-font: 'syne' , sans-serif;
+}
 
 /* Active nav link state (Services current page) */
 .main-nav-list__link.is-current {
@@ -79,6 +78,7 @@
     letter-spacing: -0.5px;
     color: var(--color-white);
     margin: 0 0 18px;
+    font-family: var(--secondary-font);
 }
 
 .page-hero__heading-accent {
@@ -121,11 +121,7 @@
     font-weight: 600;
 }
 
-/* ============================================================
-   SERVICES PAGE GRID
-   Homepage service-card look, resolved to concrete tokens so
-   it renders correctly outside the homepage variable context.
-   ============================================================ */
+/* service part starts */
 .services-page {
     padding: 100px 0;
     background-color: var(--color-white);
@@ -170,6 +166,7 @@
     color: var(--color-heading-dark);
     line-height: 1.25;
     margin-bottom: 18px;
+    font-family: var(--secondary-font);
 }
 
 .services-page .services-title .text-accent {
@@ -343,6 +340,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0;
+    font-family: var(--secondary-font);
 }
 
 .why-head__heading-accent {
@@ -442,6 +440,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0 0 14px;
+    font-family: var(--secondary-font);
 }
 
 .proc-head__heading-accent {
@@ -583,6 +582,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0 0 14px;
+    font-family: var(--secondary-font);
 }
 
 .vs-head__heading-accent {

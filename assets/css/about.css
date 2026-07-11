@@ -1,10 +1,7 @@
-/* ============================================================
-   MOTOR SERVICE — ABOUT PAGE STYLESHEET (DESKTOP DEFAULT)
-   Desktop-first. Reuses homepage tokens from style.css.
-   page-hero + cta-banner are shared; styled in services.css /
-   style.css respectively. This file adds only About-only sections.
-   Responsive overrides live in responsive.css
-   ============================================================ */
+:root{
+     --font-primary: 'Poppins', sans-serif;
+    --secondary-font: 'syne' , sans-serif;
+}
 
 /* Active nav link state (About current page) */
 .main-nav-list__link.is-current {
@@ -86,6 +83,7 @@
     letter-spacing: -0.5px;
     color: var(--color-white);
     margin: 0 0 18px;
+    font-family: var(--secondary-font);
 }
 
 .page-hero__heading-accent {
@@ -241,6 +239,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0 0 20px;
+    font-family: var(--secondary-font);
 }
 
 .story-body__text {
@@ -427,6 +426,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0 0 16px;
+    font-family: var(--secondary-font);
 }
 
 .values-head__text {

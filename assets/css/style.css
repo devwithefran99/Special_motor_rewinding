@@ -16,6 +16,7 @@
     --color-black: #000000;
 
     --font-primary: 'Poppins', sans-serif;
+    --secondary-font: 'syne' , sans-serif;
 
     --navbar-height: 88px;
     --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -415,6 +416,7 @@ img {
     letter-spacing: -0.5px;
     color: var(--color-heading-dark);
     margin-bottom: 24px;
+    font-family: var(--secondary-font);
 }
 
 .hero-content__heading-accent {
@@ -636,6 +638,7 @@ img {
     color: var(--color-heading-dark);
     padding-bottom: 20px;
     margin-bottom: 36px;
+    font-family: var(--secondary-font);
 }
  
 #processHeadingAccent {
@@ -722,6 +725,7 @@ color: var(--color-bg-light);
     font-weight: 600;
     color: var(--color-heading-dark);
     margin: 0;
+
 }
  
 .process-step__desc {
@@ -860,6 +864,7 @@ color: var(--color-bg-light);
     font-weight: 700;
     color: var(--color-heading-dark);
     margin: 0;
+    font-family: var(--secondary-font);
 }
 
 .services-head__heading-accent {
@@ -1038,6 +1043,7 @@ color: var(--color-bg-light);
     line-height: 1.25;
     color: var(--color-white);
     margin-bottom: 16px;
+    font-family: var(--secondary-font);
 }
 
 #ctaBannerText {
@@ -1144,6 +1150,7 @@ color: var(--color-bg-light);
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin-bottom: 28px;
+    font-family: var(--secondary-font);
 }
 
 /* ---- Accordion (Bootstrap) ---- */
@@ -1342,6 +1349,7 @@ color: var(--color-bg-light);
     line-height: 1.2;
     color: var(--color-heading-dark);
     margin: 0;
+    font-family: var(--secondary-font);
 }
 
 #areaHeadingAccent {
@@ -1572,6 +1580,7 @@ color: var(--color-bg-light);
     font-weight: 700;
     color: var(--color-heading-dark);
     margin: 0;
+    font-family: var(--secondary-font);
 }
 
 .book-head__heading-accent {
@@ -1828,6 +1837,7 @@ a.book-info-item__value:hover {
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin-bottom: 16px;
+    font-family: var(--secondary-font);
 }
  
 #tstHeading .tst-head__heading-accent {

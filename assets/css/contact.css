@@ -1,10 +1,7 @@
-/* ============================================================
-   MOTOR SERVICE — CONTACT PAGE STYLESHEET (DESKTOP DEFAULT)
-   Desktop-first. Reuses homepage tokens from style.css.
-   The right-side form reuses the #bookFormCard / .book-form
-   component already styled in style.css.
-   Responsive overrides live in responsive.css
-   ============================================================ */
+:root{
+     --font-primary: 'Poppins', sans-serif;
+    --secondary-font: 'syne' , sans-serif;
+}
 
 /* Active nav link state (Contact current page) */
 .main-nav-list__link.is-current {
@@ -86,6 +83,7 @@
     letter-spacing: -0.5px;
     color: var(--color-white);
     margin: 0 0 18px;
+    font-family: var(--secondary-font);
 }
 
 .page-hero__heading-accent {
@@ -168,6 +166,7 @@
     line-height: 1.25;
     color: var(--color-heading-dark);
     margin: 0 0 16px;
+    font-family: var(--secondary-font);
 }
 
 .contact-info__text {
@@ -296,6 +295,7 @@ a.contact-channel__value:hover {
     color: var(--color-cta-red);
 }
 
+
 /* ---- Right: form wrapper (card styled in style.css) ---- */
 #contactFormWrap {
     display: flex;
@@ -348,4 +348,8 @@ a.contact-channel__value:hover {
 #mapDirections:hover {
     background-color: var(--color-primary-blue-dark);
     transform: translateY(-2px);
+}
+#contactFormWrap #bookFormCard h2{
+    font-family: var(--secondary-font);
+   
 }
