@@ -69,16 +69,32 @@
 
                 <!-- Desktop Right Actions -->
                 <div class="navbar-actions">
-                    <a href="tel:+8001234567" class="navbar-actions__phone" aria-label="Call us at +971 50 223 1278">
+                    <a href="tel:+971502231278" class="navbar-actions__phone" aria-label="Call us at +971 50 223 1278">
                         <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
                         <span class="navbar-actions__phone-number">+971 50 223 1278</span>
                     </a>
-                    <a href="contact.html?#" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
+                    <a href="#bookFormCard" class="navbar-actions__cta" aria-label="Book a service">Book A Service</a>
                 </div>
             </div>
         </div>
     </nav>
 </header>
+<!-- bottom nav -->
+<div id="mobile-cta-bar" class="mobile-cta-bar">
+    <a href="tel:+971502231278" class="mobile-cta-bar__item mobile-cta-bar__item--call" aria-label="Call us">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+    </a>
+    <a href="https://wa.me/+971502231278" class="mobile-cta-bar__item mobile-cta-bar__item--wa" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+    <a href="#bookFormCard" class="mobile-cta-bar__item mobile-cta-bar__item--book" aria-label="Book a service">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book Service</span>
+    </a>
+</div>
+<!--  STICKY MOBILE BOTTOM CTA BAR END  -->
 
 <!-- Mobile Offcanvas Sidebar (Bootstrap) -->
 <!-- COMPONENT: mobile-sidebar -->
@@ -107,7 +123,7 @@
         </ul>
 
         <div class="mobile-sidebar__bottom">
-            <a href="tel:+8001234567" class="navbar-actions__phone navbar-actions__phone--sidebar">
+            <a href="tel:+971502231278" class="navbar-actions__phone navbar-actions__phone--sidebar">
                 <i class="fa-solid fa-phone navbar-actions__phone-icon"></i>
                 <span class="navbar-actions__phone-number">+971 50 223 1278</span>
             </a>
@@ -176,7 +192,7 @@
                             <span class="contact-channel__icon"><i class="fa-solid fa-phone"></i></span>
                             <div class="contact-channel__body">
                                 <span class="contact-channel__label">Call Us</span>
-                                <a href="tel:+971501234567" class="contact-channel__value">+971 50 123 4567</a>
+                                <a href="tel:+971502231278" class="contact-channel__value">+971 50 223 1278</a>
                             </div>
                         </li>
 
@@ -184,7 +200,7 @@
                             <span class="contact-channel__icon contact-channel__icon--whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
                             <div class="contact-channel__body">
                                 <span class="contact-channel__label">WhatsApp</span>
-                                <a href="https://wa.me/971501234567" class="contact-channel__value" target="_blank" rel="noopener">Send A Motor Photo</a>
+                                <a href="https://wa.me/971502231278" class="contact-channel__value" target="_blank" rel="noopener">Send A Motor Photo</a>
                             </div>
                         </li>
 
@@ -200,7 +216,7 @@
                             <span class="contact-channel__icon"><i class="fa-solid fa-location-dot"></i></span>
                             <div class="contact-channel__body">
                                 <span class="contact-channel__label">Workshop</span>
-                                <span class="contact-channel__value contact-channel__value--static">42 Industrial Zone, Mussafah,<br>Abu Dhabi, UAE</span>
+                                <span class="contact-channel__value contact-channel__value--static">M13, Mussafah,<br>Abu Dhabi, UAE</span>
                             </div>
                         </li>
 
@@ -310,14 +326,14 @@
             </p>
 
             <div id="ctaBannerActions" class="cta-banner__actions">
-                <a id="ctaBtnBook" href="#book-section" class="cta-banner__btn">
+                <a id="ctaBtnBook" href="#contactFormWrap" class="cta-banner__btn">
                     <i class="fa-solid fa-calendar-check"></i>
                     <span>Book A Service</span>
                 </a>
-                <a id="ctaBtnCall" href="tel:+971501234567" class="cta-banner__btn">
-                    <span>Call +971 50 123 4567</span>
+                <a id="ctaBtnCall" href="tel:+971502231278" class="cta-banner__btn">
+                    <span>Call +971 50 223 1278</span>
                 </a>
-                <a id="ctaBtnWhatsapp" href="https://wa.me/971501234567" class="cta-banner__btn" target="_blank" rel="noopener">
+                <a id="ctaBtnWhatsapp" href="https://wa.me/971502231278" class="cta-banner__btn" target="_blank" rel="noopener">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Whatsapp Us</span>
                 </a>
@@ -360,7 +376,7 @@
                     <li><a href="services.html" class="footer-links__link">Services</a></li>
                     <li><a href="about.html" class="footer-links__link">About Us</a></li>
                     <li><a href="contact.html" class="footer-links__link">Contact Us</a></li>
-                    <li><a href="#book-section" class="footer-links__link">Book A Service</a></li>
+                    <li><a href="#bookFormCard" class="footer-links__link">Book A Service</a></li>
                 </ul>
             </div>
 
@@ -368,11 +384,11 @@
             <div class="col-lg-3 col-md-6 footer-col">
                 <h3 class="footer-col__title">Our Services</h3>
                 <ul class="footer-links">
-                    <li><a href="service-details.html?service=chiller-compressor-winding" class="footer-links__link">Chiller Compressor Winding</a></li>
-                    <li><a href="service-details.html?service=water-pump-repairing" class="footer-links__link">Water Pump Repairing</a></li>
-                    <li><a href="service-details.html?service=electric-motor-rewinding" class="footer-links__link">Electric Motor Rewinding</a></li>
-                    <li><a href="service-details.html?service=generator-repair" class="footer-links__link">Generator Repair</a></li>
-                    <li><a href="service-details.html?service=ac-dc-motor-rewinding" class="footer-links__link">A/C &amp; DC Motor Rewinding</a></li>
+                    <li><a href="chiller-compressor-winding.html" class="footer-links__link">Chiller Compressor Winding</a></li>
+                    <li><a href="water-pump-repairing.html" class="footer-links__link">Water Pump Repairing</a></li>
+                    <li><a href="electric-motor-rewinding.html" class="footer-links__link">Electric Motor Rewinding</a></li>
+                    <li><a href="generator-repair.html" class="footer-links__link">Generator Repair</a></li>
+                    <li><a href="ac-dc-motor-rewinding.html" class="footer-links__link">A/C &amp; DC Motor Rewinding</a></li>
                 </ul>
             </div>
 
@@ -382,11 +398,11 @@
                 <ul id="footerContact" class="footer-contact">
                     <li class="footer-contact__item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>42 Industrial Zone, Mussafah,<br>Abu Dhabi, UAE</span>
+                        <span>M13, Mussafah,<br>Abu Dhabi, UAE</span>
                     </li>
                     <li class="footer-contact__item">
                         <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+971501234567">+971 50 123 4567</a>
+                        <a href="tel:+971502231278">+971 50 223 1278</a>
                     </li>
                     <li class="footer-contact__item">
                         <i class="fa-solid fa-envelope"></i>
@@ -408,8 +424,8 @@
             <div class="footer-bottom__inner">
                 <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Motor Service. All rights reserved.</p>
                 <ul class="footer-bottom__legal">
-                    <li><a href="#" class="footer-bottom__link">Privacy Policy</a></li>
-                    <li><a href="#" class="footer-bottom__link">Terms of Service</a></li>
+                    <li><a href="legal.html" class="footer-bottom__link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer-bottom__link">Terms of Service</a></li>
                 </ul>
             </div>
         </div>
