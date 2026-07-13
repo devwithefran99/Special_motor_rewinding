@@ -341,104 +341,31 @@ img {
     color: var(--color-white);
 }
 /* 
-   HERO SECTION
+   HERO SECTION — FULL BANNER CAROUSEL
     */
 .hero-section {
     position: relative;
-    background-color: var(--color-bg-light);
+    width: 100%;
+    line-height: 0;
     overflow: hidden;
 }
 
-.hero-carousel .carousel-inner {
-    overflow: visible;
-}
-
-/* ---- Full-bleed Slide ---- */
-.hero-slide {
-    position: relative;
+#heroCarousel {
     width: 100%;
-    min-height: 620px;
-    overflow: hidden;
 }
 
-.hero-slide__bg {
-    position: absolute;
-    inset: 0;
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center right;
 }
 
-/* Soft light gradient so the overlaid text stays readable over the photo */
-.hero-slide::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, var(--color-bg-light) 0%, rgba(245, 247, 250, 0.85) 40%, rgba(245, 247, 250, 0.15) 68%, rgba(245, 247, 250, 0) 85%);
-    z-index: 1;
+.hero-carousel__img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
-
-.hero-slide__overlay {
-    position: relative;
-    z-index: 2;
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-}
-
-/* ---- Left Content ---- */
-.hero-content {
-    max-width: 480px;
-}
-
-.hero-content__eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--color-primary-blue);
-    margin-bottom: 20px;
-}
-
-.hero-content__eyebrow-line {
-    display: inline-block;
-    width: 48px;
-    height: 2px;
-    background-color: var(--color-primary-blue);
-}
-
-.hero-content__heading {
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-    color: var(--color-heading-dark);
-    margin-bottom: 24px;
-    font-family: var(--secondary-font);
-}
-
-.hero-content__heading-accent {
-    color: var(--color-primary-blue);
-}
-
-.hero-content__description {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--color-text-gray);
-    max-width: 460px;
-}
-
-/* ---- Carousel Fade Transition ---- */
-.hero-carousel.carousel-fade .carousel-item {
-    transition: opacity 0.8s ease-in-out;
-}
-
-
-/* 
-   FOLLOW US BADGE
-    */
+   /* FOLLOW US BADGE */
+    
 .follow-us-badge {
     position: relative;
     width: 480px;

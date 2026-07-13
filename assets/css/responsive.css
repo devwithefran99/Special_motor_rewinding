@@ -20,14 +20,7 @@
         font-size: 14px;
     }
 
-    .hero-content__heading {
-        font-size: 38px;
-    }
-
-    .hero-slide,
-    .hero-slide__overlay {
-        min-height: 500px;
-    }
+   
 
     .process-section {
         padding: 90px 0;
@@ -68,23 +61,6 @@
         justify-content: space-between;
     }
 
-    /* Banner keeps filling the full slide; content stays overlaid top-left, just scaled down */
-    .hero-slide,
-    .hero-slide__overlay {
-        min-height: 440px;
-    }
-
-    .hero-content {
-        max-width: 360px;
-    }
-
-    .hero-content__heading {
-        font-size: 30px;
-    }
-
-    .hero-content__description {
-        font-size: 14px;
-    }
 
     .follow-us-badge {
         width: 420px;
@@ -220,37 +196,7 @@
 
 /*  MOBILE (<= 767px)  */
 @media (max-width: 767px) {
-    .hero-slide,
-    .hero-slide__overlay {
-        min-height: 380px;
-    }
-
-    .hero-slide__bg {
-        object-position: center right -20px;
-    }
-
-    .hero-content {
-        max-width: 260px;
-    }
-
-    .hero-content__eyebrow {
-        font-size: 13px;
-        margin-bottom: 12px;
-    }
-
-    .hero-content__eyebrow-line {
-        width: 32px;
-    }
-
-    .hero-content__heading {
-        font-size: 21px;
-        margin-bottom: 14px;
-    }
-
-    .hero-content__description {
-        font-size: 12.5px;
-        line-height: 1.5;
-    }
+  
 
     .follow-us-badge {
         width: 340px;
@@ -522,33 +468,7 @@
         width: 300px;
     }
 
-    .hero-slide,
-    .hero-slide__overlay {
-        min-height: 320px;
-    }
-
-    .hero-content {
-        max-width: 210px;
-    }
-
-    .hero-content__heading {
-        font-size: 17px;
-        margin-bottom: 10px;
-    }
-
-    .hero-content__eyebrow {
-        font-size: 11px;
-        margin-bottom: 8px;
-    }
-
-    .hero-content__eyebrow-line {
-        width: 24px;
-    }
-
-    .hero-content__description {
-        font-size: 11px;
-    }
-
+   
     .follow-us-badge {
         width: 280px;
     }
@@ -712,11 +632,7 @@
     }
     /* Mobile sidebar + overlay: desktop-এ সম্পূর্ণ লুকানো */
 
-    /* ============================================================
-   MOTOR SERVICE — SERVICES PAGE RESPONSIVE
-   Desktop-first. Only media-query overrides live here.
-   Breakpoints mirror responsive.css (1199 / 991 / 767 / 575).
-   ============================================================ */
+    /* */
 
 @media (max-width: 1199px) {
     #pageHeroHeading {
@@ -761,6 +677,7 @@
     #whyHeading {
         font-size: 28px;
     }
+    
 }
 
 
@@ -769,6 +686,7 @@
     #page-hero {
         padding: 48px 0 44px;
     }
+   
 
     .page-hero__glow {
         width: 320px;
@@ -835,6 +753,7 @@
     #pageHeroEyebrow {
         font-size: 13px;
     }
+    
 
     /* Services grid → 1 column */
     .services-page #services-grid {
@@ -1363,3 +1282,29 @@
     }
 }
 } 
+@media (min-width: 1600px) {
+    .hero-carousel__img {
+        max-height: 720px;
+        object-fit: contain;
+        background-color: #ffffff;
+    }
+}
+
+/* MINI MOBILE */
+@media (max-width: 575px) {
+    .hero-section {
+        line-height: 0;
+    }
+
+    .hero-carousel__img{
+        height: 220px;
+        width: 100%;
+          object-fit: contain;
+        object-position: center;
+        background-color: #ffffff;
+    }
+
+    .carousel-item {
+        margin-top: 10px;
+    }
+}
